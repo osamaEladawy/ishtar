@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ishtar/features/auth/presentation/manager/cubit/auth_cubit.dart';
 
 class CustomTextField extends StatelessWidget {
   final TextEditingController? controller;
@@ -8,7 +10,7 @@ class CustomTextField extends StatelessWidget {
   final void Function()? onPressed;
   final String? labelText;
   final String? hintText;
-  final bool? obscureText;
+  final bool obscureText;
   final IconData? icon;
   final TextInputType? keyboardType;
   const CustomTextField(
@@ -17,7 +19,7 @@ class CustomTextField extends StatelessWidget {
       this.labelText,
       this.validator,
       this.hintText,
-      this.obscureText,
+      this.obscureText = false,
       this.icon,
       this.onChanged,
       this.onPressed,
@@ -26,24 +28,50 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height : 55.h,
+      height: 48.h,
       child: TextFormField(
         keyboardType: keyboardType,
-       // obscureText: obscureText == null || obscureText == false ? true : false,
+        obscureText: obscureText == false ? true : false,
         validator: validator,
         onChanged: onChanged,
         controller: controller,
         decoration: InputDecoration(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(4.r),
+            borderSide: BorderSide(
+              color: const Color(0xffE2E2E2),
+              width: 1.w,
+            ),
+          ),
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(4.r),
+            borderSide: const BorderSide(
+              color: Color(0xffE2E2E2),
+              width: 1.0,
+            ),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(4.r),
+            borderSide: BorderSide(
+              color: const Color(0xffE2E2E2),
+              width: 1.w,
+            ),
+          ),
+          filled: true,
+          fillColor: const Color(0xffF7F5F9),
           labelText: labelText,
           hintText: hintText,
-          suffixIcon: IconButton(
-            onPressed: onPressed,
-            icon: Icon(
-              icon,
-              color: obscureText == null || obscureText == false
-                  ? Colors.grey
-                  : Colors.blue,
-            ),
+          suffixIcon: BlocBuilder<AuthCubit, AuthState>(
+            builder: (context, state) {
+              return IconButton(
+                onPressed: onPressed,
+                icon: Icon(
+                  icon,
+                  color: const Color(0xffB0B0B0),
+                  size: 20.sp,
+                ),
+              );
+            },
           ),
         ),
       ),

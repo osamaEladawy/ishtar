@@ -1,8 +1,8 @@
 import 'package:get_it/get_it.dart';
 import 'package:ishtar/common/cubit/location_bloc/location_cubit.dart';
+import 'package:ishtar/features/auth/auth_injection.dart';
 import 'package:ishtar/features/splash/splash_injection.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
 
 final getIt = GetIt.instance;
 
@@ -10,6 +10,7 @@ Future<void> init() async {
   ///features
 
   initSplashInjection();
+  authInjection();
   // initOnBoardingInjection();
   // initHomeInjection();
   // initHomeTapInjection();

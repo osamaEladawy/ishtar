@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ishtar/common/widget/custom_text_field.dart';
 import 'package:ishtar/config/color_resources.dart';
+import 'package:ishtar/config/resources.dart';
 import 'package:ishtar/core/functions/snackbar.dart';
 
 class CustomFieldPhoneNumber extends StatelessWidget {
@@ -17,12 +18,30 @@ class CustomFieldPhoneNumber extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
+        Expanded(
+          child: CustomTextField(
+            keyboardType: TextInputType.phone,
+            onChanged: (value) {
+              try {
+                valueChanged(value);
+              } catch (e) {
+                showSnackBar(context, 'Invalid phone number');
+              }
+            },
+            //controller: _phoneController,
+            // hintText: LocaleKeys.enterYourPhoneNumber.tr(),
+          ),
+        ),
+        SizedBox(width: 10.w),
         Container(
-          height: 55.h,
+          height: 48.h,
           decoration: BoxDecoration(
-            color: Theme.of(context).cardColor,
+            color: const Color(0xffF7F5F9),
             borderRadius: BorderRadius.circular(8.w),
-            border: Border.all(color: ColorResources.borderColor, width: 1.5),
+            border: Border.all(
+              color: const Color(0xffE2E2E2),
+              width: 1.w,
+            ),
           ),
           child: Container(
             width: 100.w,
@@ -34,16 +53,15 @@ class CustomFieldPhoneNumber extends StatelessWidget {
                 return Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
+                    SvgPicture.asset(IconsManger.arrowDownIcon),
+                    SizedBox(width: 7.7.w),
                     Image.asset(
                       countryCode!.flagUri!,
                       package: 'country_code_picker',
-                      width: 30.0.w,
+                      width: 32.0.w,
+                      height: 21.h,
                     ),
-                    Text('${countryCode}'),
-                    SizedBox(
-                      width: 2.w,
-                    ),
-                    SvgPicture.asset(''), // Arrow-down icon
+                    // Text('${countryCode}'),
                   ],
                 );
               },
@@ -66,22 +84,9 @@ class CustomFieldPhoneNumber extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: 10.w),
-        Expanded(
-          child: CustomTextField(
-            keyboardType: TextInputType.phone,
-            onChanged: (value) {
-              try {
-                valueChanged(value);
-              } catch (e) {
-                showSnackBar(context, 'Invalid phone number');
-              }
-            },
-            //controller: _phoneController,
-            // hintText: LocaleKeys.enterYourPhoneNumber.tr(),
-          ),
-        ),
       ],
     );
   }
 }
+
+List<Widget> groups = [];

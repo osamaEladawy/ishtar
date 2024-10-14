@@ -5,6 +5,7 @@ import 'package:ishtar/common/widget/custom_container_ishtar.dart';
 import 'package:ishtar/common/widget/primary_button.dart';
 import 'package:ishtar/common/widget/text_widget.dart';
 import 'package:ishtar/config/app_text_styles.dart';
+import 'package:ishtar/config/routes_manager.dart';
 import 'package:ishtar/translations/locale_keys.g.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -40,7 +41,9 @@ class WelcomeScreen extends StatelessWidget {
               SizedBox(height: 51.h),
               PrimaryButton(
                 title: LocaleKeys.user.tr(),
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, Routes.loginScreen);
+                },
               ),
               SizedBox(height: 9.h),
               PrimaryButton(

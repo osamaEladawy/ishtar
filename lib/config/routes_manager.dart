@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ishtar/features/auth/presentation/pages/login_screen.dart';
 import 'package:ishtar/features/auth/presentation/pages/welcome_screen.dart';
 
 import '../features/splash/screen/splash_screen.dart';
@@ -21,6 +22,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const SplashScreen());
       case Routes.welcomeScreen:
         return MaterialPageRoute(builder: (_) => const WelcomeScreen());
+      case Routes.loginScreen:
+        return MaterialPageRoute(builder: (_) => const LoginScreen());
 
       default:
         return unDefineRoute();

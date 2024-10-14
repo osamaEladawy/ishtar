@@ -19,6 +19,9 @@ class IconsManger {
   static const String i = '$ICONS_PATH/i.svg';
   static const String a = '$ICONS_PATH/a.svg';
   static const String correct = '$ICONS_PATH/correct.svg';
+  static const String google = '$ICONS_PATH/google.svg';
+  static const String facebook = '$ICONS_PATH/facebook.svg';
+  static const String check = '$ICONS_PATH/check.svg';
 }
 
 class LottieManger {}

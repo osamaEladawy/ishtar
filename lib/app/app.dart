@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ishtar/features/auth/presentation/manager/cubit/auth_cubit.dart';
 
 import '../build_injection.dart';
 import '../common/cubit/location_bloc/location_cubit.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MultiBlocProvider(
           providers: [
-            //BlocProvider<HomeCubit>(create: (context) => getIt<HomeCubit>()),
+            BlocProvider<AuthCubit>(create: (context) => getIt<AuthCubit>()),
             BlocProvider<LocationCubit>(create: (context) => getIt<LocationCubit>()),
            //BlocProvider<ProfileCubit>(create: (context) => getIt<ProfileCubit>()),
            // BlocProvider<LanguageCubit>(create: (context) => getIt<LanguageCubit>()),
