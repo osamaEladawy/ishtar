@@ -9,8 +9,7 @@ part 'auth_state.dart';
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit() : super(AuthInitial());
 
-  static final AuthCubit _authCubit =
-      BlocProvider.of(navigatorKey.currentContext!);
+  static final AuthCubit _authCubit = BlocProvider.of(navigatorKey.currentContext!);
 
   static AuthCubit get instance => _authCubit;
 

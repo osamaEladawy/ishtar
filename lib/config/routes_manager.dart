@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ishtar/features/auth/presentation/pages/login_screen.dart';
-import 'package:ishtar/features/auth/presentation/pages/welcome_screen.dart';
+import 'package:ishtar/features/auth/screen/login_screen.dart';
+import 'package:ishtar/features/auth/screen/welcome_screen.dart';
 
 import '../features/splash/screen/splash_screen.dart';
 import 'app_strings.dart';

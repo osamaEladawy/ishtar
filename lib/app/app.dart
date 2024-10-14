@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ishtar/features/auth/presentation/manager/cubit/auth_cubit.dart';
 
 import '../build_injection.dart';
 import '../common/cubit/location_bloc/location_cubit.dart';
 import '../config/routes_manager.dart';
+import '../features/auth/cubit/auth_cubit.dart';
 import '../features/splash/screen/splash_screen.dart';
 import '../theme/light_theme.dart';
 
