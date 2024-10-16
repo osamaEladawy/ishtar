@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ishtar/features/auth/presentation/pages/get_info_screen.dart';
 import 'package:ishtar/features/auth/presentation/pages/login_screen.dart';
 import 'package:ishtar/features/auth/presentation/pages/verfication_code_screen.dart';
 import 'package:ishtar/features/auth/presentation/pages/welcome_screen.dart';
@@ -13,6 +14,7 @@ class Routes {
   static const String homeScreen = 'homeScreen';
   static const String loginScreen = 'loginScreen';
   static const String verificationCodeScreen = 'verificationCodeScreen';
+  static const String getInfoScreen = 'getInfoScreen';
 }
 
 class RouteGenerator {
@@ -29,6 +31,8 @@ class RouteGenerator {
       case Routes.verificationCodeScreen:
         return MaterialPageRoute(
             builder: (_) => const VerificationCodeScreen());
+      case Routes.getInfoScreen:
+        return MaterialPageRoute(builder: (_) => const GetInfoScreen());
 
       default:
         return unDefineRoute();

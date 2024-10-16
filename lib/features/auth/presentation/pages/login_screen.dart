@@ -12,6 +12,7 @@ import 'package:ishtar/config/app_text_styles.dart';
 import 'package:ishtar/config/resources.dart';
 import 'package:ishtar/config/routes_manager.dart';
 import 'package:ishtar/features/auth/cubit/auth_cubit.dart';
+import 'package:ishtar/features/auth/presentation/widgets/login_or_register.dart';
 import 'package:ishtar/translations/locale_keys.g.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -29,138 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Container(
           margin: EdgeInsets.only(left: 20.w, right: 20.w, bottom: 40.w),
           alignment: Alignment.center,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                SizedBox(height: 121.h),
-                const CustomContainerIshtar(),
-                SizedBox(height: 51.h),
-                TextWidget(
-                  LocaleKeys.welcome.tr(),
-                  textStyle: AppTextStyle.textStyle(
-                      appFontSize: 19.sp,
-                      appFontHeight: 35.61.sp,
-                      appFontWeight: FontWeight.w600,
-                      color: const Color(0xff000000)),
-                ),
-                TextWidget(
-                  LocaleKeys.enterYourPhoneNumberToLogin.tr(),
-                  textStyle: AppTextStyle.textStyle(
-                      appFontSize: 13.sp,
-                      appFontHeight: 24.36.sp,
-                      appFontWeight: FontWeight.w500,
-                      color: const Color(0xff000000)),
-                ),
-                SizedBox(height: 47.h),
-                BlocBuilder<AuthCubit, AuthState>(
-                  builder: (context, state) {
-                    return CustomTextField(
-                        hintText: "كلمة السر",
-                        onPressed: () {
-                          AuthCubit.instance.showPassword();
-                          setState(() {});
-                        },
-                        obscureText: AuthCubit.instance.isDisabled,
-                        icon: AuthCubit.instance.icon());
-                  },
-                ),
-                SizedBox(height: 18.h),
-                CustomFieldPhoneNumber(
-                  valueChanged: (String value) {},
-                ),
-                SizedBox(height: 14.h),
-                Row(
-                  children: [
-                    BlocBuilder<AuthCubit, AuthState>(
-                      builder: (context, state) {
-                        return GestureDetector(
-                          onTap: () {
-                            AuthCubit.instance.checkBox();
-                            setState(() {});
-                          },
-                          child: Container(
-                            height: 24.h,
-                            width: 24.w,
-                            alignment: Alignment.center,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(6.r),
-                              border: Border.all(
-                                color: const Color(0xff188DFF),
-                                width: 1.7.w,
-                              ),
-                            ),
-                            child: AuthCubit.instance.value
-                                ? SvgPicture.asset(IconsManger.check)
-                                : null,
-                            // child: Checkbox(
-                            //     activeColor: Colors.transparent,
-                            //     checkColor: const Color(0xff188DFF),
-                            //     shape: RoundedRectangleBorder(
-                            //       borderRadius: BorderRadius.circular(6.r),
-                            //       side: BorderSide(
-                            //         color: const Color(0xff188DFF),
-                            //         width: 5.w,
-                            //       ),
-                            //     ),
-                            //     value: AuthCubit.instance.value,
-                            //     onChanged: (value) {
-                            //       AuthCubit.instance.checkBox(value!);
-                            //     }),
-                          ),
-                        );
-                      },
-                    ),
-                    SizedBox(width: 5.w),
-                    Text.rich(
-                      TextSpan(
-                        children: [
-                          TextSpan(
-                            text: "أوافق علي جميع ",
-                            style: AppTextStyle.textStyle(
-                              appFontSize: 13.sp,
-                              appFontHeight: 24.36.sp,
-                              appFontWeight: FontWeight.w500,
-                              // color: Color(0xff188DFF),
-                            ),
-                          ),
-                          TextSpan(
-                            text: " الشروط والأحكام",
-                            style: AppTextStyle.textStyle(
-                              appFontSize: 13.sp,
-                              appFontHeight: 24.36.sp,
-                              appFontWeight: FontWeight.w500,
-                              color: const Color(0xff188DFF),
-                              decoration: TextDecoration.underline,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-                SizedBox(height: 18.h),
-                PrimaryButton(
-                  title: "متابعه",
-                  onTap: () {
-                    Navigator.pushNamed(context, Routes.verificationCodeScreen);
-                  },
-                ),
-                SizedBox(height: 18.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    GestureDetector(
-                      child: SvgPicture.asset(IconsManger.google),
-                    ),
-                    SizedBox(width: 88.w),
-                    GestureDetector(
-                      child: SvgPicture.asset(IconsManger.facebook),
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
+          child: const LoginOrRegister(),
         ),
       ),
     );

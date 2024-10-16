@@ -9,7 +9,8 @@ part 'auth_state.dart';
 class AuthCubit extends Cubit<AuthState> {
   AuthCubit() : super(AuthInitial());
 
-  static final AuthCubit _authCubit = BlocProvider.of(navigatorKey.currentContext!);
+  static final AuthCubit _authCubit =
+      BlocProvider.of(navigatorKey.currentContext!);
 
   static AuthCubit get instance => _authCubit;
 
@@ -19,11 +20,13 @@ class AuthCubit extends Cubit<AuthState> {
   checkBox() {
     value = !value;
     emit(Agree(isSelected: value));
+    emit(const ChangeColor());
   }
 
   showPassword() {
     isDisabled = isDisabled == false ? true : false;
     emit(DisplayPass(isShowPass: isDisabled));
+    emit(const ChangeColor());
   }
 
   IconData? icon() {
@@ -32,5 +35,31 @@ class AuthCubit extends Cubit<AuthState> {
     } else {
       return Icons.visibility_off;
     }
+  }
+
+  ///get info screen
+  int selectDocOrVisible = 0;
+  int selectHosOrDoc = 0;
+
+  List<String> titles = [
+    "طبيبه",
+    "سياحية",
+  ];
+  List<String> titles2 = [
+    "مستشفى",
+    "دكتور",
+    "مختبر",
+  ];
+
+  void setSelectHosDoc(int value) {
+    selectHosOrDoc = value;
+    emit(SelectDoc(index: selectHosOrDoc));
+    emit(const ChangeColor());
+  }
+
+  void setSelectDoc(int value) {
+    selectDocOrVisible = value;
+    emit(SelectDoc(index: selectDocOrVisible));
+    emit(const ChangeColor());
   }
 }

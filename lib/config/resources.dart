@@ -8,6 +8,7 @@ class ImageManger {
   static const String back_ground_img = '$IMAGE_PATH/back_ground_img.png';
   static const String profile = '$IMAGE_PATH/profile.png';
   static const String lock = '$IMAGE_PATH/lock.png';
+  static const String insta = '$IMAGE_PATH/instagram.png';
 }
 
 class IconsManger {
@@ -23,6 +24,7 @@ class IconsManger {
   static const String google = '$ICONS_PATH/google.svg';
   static const String facebook = '$ICONS_PATH/facebook.svg';
   static const String check = '$ICONS_PATH/check.svg';
+  static const String instagram = '$ICONS_PATH/instagram.svg';
 }
 
 class LottieManger {}

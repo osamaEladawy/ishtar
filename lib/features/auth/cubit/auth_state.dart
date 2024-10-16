@@ -20,3 +20,15 @@ final class Agree extends AuthState {
 
   const Agree({required this.isSelected});
 }
+
+//get info screen
+
+final class SelectDoc extends AuthState {
+  final int index;
+
+  const SelectDoc({required this.index});
+}
+
+final class ChangeColor extends AuthState {
+  const ChangeColor();
+}
