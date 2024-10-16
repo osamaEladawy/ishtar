@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ishtar/features/auth/screen/login_screen.dart';
-import 'package:ishtar/features/auth/screen/welcome_screen.dart';
+import 'package:ishtar/features/auth/presentation/pages/login_screen.dart';
+import 'package:ishtar/features/auth/presentation/pages/verfication_code_screen.dart';
+import 'package:ishtar/features/auth/presentation/pages/welcome_screen.dart';
 
 import '../features/splash/screen/splash_screen.dart';
 import 'app_strings.dart';
@@ -11,6 +12,7 @@ class Routes {
   static const String welcomeScreen = 'welcomeScreen';
   static const String homeScreen = 'homeScreen';
   static const String loginScreen = 'loginScreen';
+  static const String verificationCodeScreen = 'verificationCodeScreen';
 }
 
 class RouteGenerator {
@@ -24,6 +26,9 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const WelcomeScreen());
       case Routes.loginScreen:
         return MaterialPageRoute(builder: (_) => const LoginScreen());
+      case Routes.verificationCodeScreen:
+        return MaterialPageRoute(
+            builder: (_) => const VerificationCodeScreen());
 
       default:
         return unDefineRoute();

@@ -2,6 +2,14 @@
   "welcome":"مرحبا بك",
   "user": "مستخدم",
   "serviceProvider" : " مزود خدمة",
-  "enterYourPhoneNumberToLogin" :"ادخل رقم الهاتف لتسجيل الدخول / انشاء حساب للمتابعة"
+  "enterYourPhoneNumberToLogin" :"ادخل رقم الهاتف لتسجيل الدخول / انشاء حساب للمتابعة",
+  "verification" :"لقد تم ارسال لك رمز التحقق علي رقم الهاتف الخاص بك",
+  "didNotReceiveTheCode":"لم يصل الكود اليك",
+  "sendAgain":" ارسال مرة اخري",
+  "login": "تسجيل دخول",
+  "continue" :"استمرار",
+  "termsAndConditions":" الشروط والأحكام",
+  "iAgreeToAll":"أوافق علي جميع ",
+  "password": "كلمة السر"
 
 }

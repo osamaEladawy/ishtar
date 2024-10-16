@@ -18,13 +18,29 @@ class CodegenLoader extends AssetLoader{
   "welcome": "مرحبا بك",
   "user": "مستخدم",
   "serviceProvider": " مزود خدمة",
-  "enterYourPhoneNumberToLogin": "ادخل رقم الهاتف لتسجيل الدخول / انشاء حساب للمتابعة"
+  "enterYourPhoneNumberToLogin": "ادخل رقم الهاتف لتسجيل الدخول / انشاء حساب للمتابعة",
+  "verification": "لقد تم ارسال لك رمز التحقق علي رقم الهاتف الخاص بك",
+  "didNotReceiveTheCode": "لم يصل الكود اليك",
+  "sendAgain": " ارسال مرة اخري",
+  "login": "تسجيل دخول",
+  "continue": "استمرار",
+  "termsAndConditions": " الشروط والأحكام",
+  "iAgreeToAll": "أوافق علي جميع ",
+  "password": "كلمة السر"
 };
 static const Map<String,dynamic> en = {
   "welcome": "Welcome",
   "user": "User",
   "serviceProvider": "Service Provider",
-  "enterYourPhoneNumberToLogin": "Enter your phone number to log in / create an account to continue"
+  "enterYourPhoneNumberToLogin": "Enter your phone number to log in / create an account to continue",
+  "verification": "A verification code has been sent to your phone number.",
+  "didNotReceiveTheCode": "Didn't receive the code",
+  "sendAgain": "Send again",
+  "login": "Login",
+  "continue": "Continue",
+  "password": "Password",
+  "termsAndConditions": "Terms and Conditions",
+  "iAgreeToAll": "I agree to All"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"ar": ar, "en": en};
 }

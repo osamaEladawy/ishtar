@@ -7,12 +7,13 @@ class ImageManger {
   static const String logo = '$IMAGE_PATH/logo.png';
   static const String back_ground_img = '$IMAGE_PATH/back_ground_img.png';
   static const String profile = '$IMAGE_PATH/profile.png';
+  static const String lock = '$IMAGE_PATH/lock.png';
 }
 
 class IconsManger {
   static const String notificationIcon = '$ICONS_PATH/notification.svg';
   static const String arrowDownIcon = '$ICONS_PATH/arrow_down.svg';
-   static const String ii = '$ICONS_PATH/ii.svg';
+  static const String ii = '$ICONS_PATH/ii.svg';
   static const String s = '$ICONS_PATH/s.svg';
   static const String h = '$ICONS_PATH/h.svg';
   static const String t = '$ICONS_PATH/t.svg';

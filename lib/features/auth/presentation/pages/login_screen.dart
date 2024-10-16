@@ -10,9 +10,9 @@ import 'package:ishtar/common/widget/primary_button.dart';
 import 'package:ishtar/common/widget/text_widget.dart';
 import 'package:ishtar/config/app_text_styles.dart';
 import 'package:ishtar/config/resources.dart';
+import 'package:ishtar/config/routes_manager.dart';
+import 'package:ishtar/features/auth/cubit/auth_cubit.dart';
 import 'package:ishtar/translations/locale_keys.g.dart';
-
-import '../cubit/auth_cubit.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -141,7 +141,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 SizedBox(height: 18.h),
                 PrimaryButton(
                   title: "متابعه",
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.pushNamed(context, Routes.verificationCodeScreen);
+                  },
                 ),
                 SizedBox(height: 18.h),
                 Row(
