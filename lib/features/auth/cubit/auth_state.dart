@@ -32,3 +32,15 @@ final class SelectDoc extends AuthState {
 final class ChangeColor extends AuthState {
   const ChangeColor();
 }
+
+final class SelectLang extends AuthState{
+  final int index;
+
+  const SelectLang({required this.index});
+}
+
+final class SelectCountry extends AuthState{
+  final int index;
+
+  SelectCountry({required this.index});
+}

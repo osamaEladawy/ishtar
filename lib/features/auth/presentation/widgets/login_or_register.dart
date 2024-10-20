@@ -48,7 +48,7 @@ class LoginOrRegister extends StatelessWidget {
             Align(
               alignment: Alignment.topRight,
               child: TextWidget(
-                "رقم الجوال",
+                LocaleKeys.phoneNumber.tr(),
                 textStyle: AppTextStyle.textStyle(
                     appFontSize: 13.sp,
                     appFontHeight: 24.36.sp,
@@ -61,7 +61,7 @@ class LoginOrRegister extends StatelessWidget {
             builder: (context, state) {
               return CustomTextField(
                 hintText: LocaleKeys.password.tr(),
-                onPressed: () {
+                onPressedSuffixIcon: () {
                   AuthCubit.instance.showPassword();
                 },
                 obscureText: AuthCubit.instance.isDisabled,
@@ -144,9 +144,11 @@ class LoginOrRegister extends StatelessWidget {
           ),
           SizedBox(height: 18.h),
           PrimaryButton(
-            title: "متابعه",
+            title: LocaleKeys.continuee.tr(),
             onTap: () {
               if (isLogin) {
+                Navigator.pushNamed(context, Routes.verificationCodeScreen);
+              } else {
                 Navigator.pushNamed(context, Routes.verificationCodeScreen);
               }
             },
@@ -154,7 +156,7 @@ class LoginOrRegister extends StatelessWidget {
           if (!isLogin) SizedBox(height: 17.h),
           if (!isLogin)
             TextWidget(
-              "أو",
+              LocaleKeys.or.tr(),
               textStyle: AppTextStyle.textStyle(
                 appFontSize: 13.sp,
                 appFontHeight: 24.36.sp,
@@ -176,12 +178,19 @@ class LoginOrRegister extends StatelessWidget {
               if (!isLogin) SizedBox(width: 54.h),
               if (!isLogin)
                 GestureDetector(
-                  child: SvgPicture.asset(
-                    IconsManger.google,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(ImageManger.instaaaa),
+                      ),
+                    ),
+                    child: Image.asset(
+                      ImageManger.insta,
+                    ),
                   ),
                 ),
             ],
-          )
+          ),
         ],
       ),
     );

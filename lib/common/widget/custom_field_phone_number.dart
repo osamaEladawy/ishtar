@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ishtar/common/widget/custom_text_field.dart';
-import 'package:ishtar/config/color_resources.dart';
 import 'package:ishtar/config/resources.dart';
 import 'package:ishtar/core/functions/snackbar.dart';
 

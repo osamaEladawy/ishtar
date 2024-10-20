@@ -34,50 +34,76 @@ class VerificationCodeScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 12.h),
-              TextWidget(
-                "تم الارسال الي +20 000 0000 000",
-                textAlign: TextAlign.center,
-                textStyle: AppTextStyle.textStyle(
-                  appFontSize: 13.sp,
-                  appFontWeight: FontWeight.w400,
-                  appFontHeight: 24.36.sp,
-                  color: const Color(0xff989898),
+              Text.rich(
+                TextSpan(
+                  children: [
+                    TextSpan(
+                      text: LocaleKeys.sentTo.tr(),
+                      style: AppTextStyle.textStyle(
+                        appFontSize: 13.sp,
+                        appFontWeight: FontWeight.w400,
+                        appFontHeight: 24.36.sp,
+                        color: const Color(0xff989898),
+                      ),
+                    ),
+                    TextSpan(
+                      text: " +020254521124",
+                      style: AppTextStyle.textStyle(
+                        appFontSize: 13.sp,
+                        appFontWeight: FontWeight.w400,
+                        appFontHeight: 24.36.sp,
+                        color: const Color(0xff989898),
+                      ),
+                    ),
+                  ],
                 ),
               ),
               SizedBox(height: 19.h),
-              PinCodeTextField(
-                length: 5,
-                obscureText: false,
-                animationType: AnimationType.fade,
-                pinTheme: PinTheme(
-                  shape: PinCodeFieldShape.box,
-                  borderRadius: BorderRadius.circular(5),
-                  fieldHeight: 59.h,
-                  fieldWidth: 59.w,
+              Container(
+                child: PinCodeTextField(
+                  keyboardType: TextInputType.number,
+                  length: 5,
+                  obscureText: false,
+                  animationType: AnimationType.fade,
+                  pinTheme: PinTheme(
+                    shape: PinCodeFieldShape.box,
+                    borderRadius: BorderRadius.circular(5),
+                    fieldHeight: 59.h,
+                    fieldWidth: 59.w,
+                    activeColor: Theme.of(context).primaryColor,
+                    //selectedColor: Color(0xffB9B9B9),
+                    inactiveColor: Color(0xffF1F1F1),
+                    activeBoxShadow: [
+                      BoxShadow(
+                        color: Color(0xffF1F1F1),
+                        offset: Offset(0, 3),
+                        spreadRadius: 5.1,
+                        blurStyle: BlurStyle.outer,
+                        blurRadius: 5,
+                      ),
+                      // box-shadow: 0px 3px 3px 0px #0000000D;
+                    ],
 
-                  //activeFillColor: Colors.white,
+                    activeFillColor: Colors.white,
+                  ),
+                  animationDuration: const Duration(milliseconds: 300),
+                  onCompleted: (v) {
+                    print("Completed");
+                  },
+                  onChanged: (value) {
+                    print(value);
+                    // setState(() {
+                    //   currentText = value;
+                    // });
+                  },
+                  beforeTextPaste: (text) {
+                    print("Allowing to paste $text");
+                    //if you return true then it will show the paste confirmation dialog. Otherwise if false, then nothing will happen.
+                    //but you can show anything you want here, like your pop up saying wrong paste format or etc
+                    return true;
+                  },
+                  appContext: context,
                 ),
-                animationDuration: const Duration(milliseconds: 300),
-                // backgroundColor: Colors.blue.shade50,
-                // enableActiveFill: true,
-                //errorAnimationController: errorController,
-                //controller: textEditingController,
-                onCompleted: (v) {
-                  print("Completed");
-                },
-                onChanged: (value) {
-                  print(value);
-                  // setState(() {
-                  //   currentText = value;
-                  // });
-                },
-                beforeTextPaste: (text) {
-                  print("Allowing to paste $text");
-                  //if you return true then it will show the paste confirmation dialog. Otherwise if false, then nothing will happen.
-                  //but you can show anything you want here, like your pop up saying wrong paste format or etc
-                  return true;
-                },
-                appContext: context,
               ),
               SizedBox(height: 17.h),
               Text.rich(
@@ -108,7 +134,7 @@ class VerificationCodeScreen extends StatelessWidget {
               PrimaryButton(
                 title: LocaleKeys.login.tr(),
                 onTap: () {
-                  Navigator.of(context).pushNamed(Routes.getInfoScreen);
+                  Navigator.of(context).pushNamed(Routes.homeTapScreen);
                 },
               ),
             ],

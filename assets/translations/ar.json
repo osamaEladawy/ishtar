@@ -7,9 +7,63 @@
   "didNotReceiveTheCode":"لم يصل الكود اليك",
   "sendAgain":" ارسال مرة اخري",
   "login": "تسجيل دخول",
-  "continue" :"استمرار",
   "termsAndConditions":" الشروط والأحكام",
   "iAgreeToAll":"أوافق علي جميع ",
-  "password": "كلمة السر"
+  "password": "كلمة السر",
+  "hospital": "مستشفى",
+  "chooseCountry": "اختيار الدولة",
+  "chooseLanguage": "اختار اللغه",
+  "continuee": "متابعه",
+  "searchByNameCountry": "بحث باسم الدولة",
+  "hospitalName": "اسم المستشفي",
+  "areaName": "اسم المنطقه",
+  "sentTo" :"تم الارسال الي",
+  "english": "الانجليزيه",
+  "arabic":"العربيه",
+  "doctor":"دكتور",
+  "doc": "طبيبه",
+   "laboratory" :"مختبر",
+   "tourist" : "سياحيه",
+   "touristAreas" : "مناطق سياحيه",
+   "restaurants" : "مطاعم",
+   "hotels":"فنادق",
+   "profile":"حسابي",
+   "home" : " الرئيسيه",
+   "myAdvertisement" :"اعلانتي",
+   "messages" :"الدردشه",
+   "addressHospital":"عنوان المستشفي",
+  "category":"الفئه",
+  "chooseTheRightPackage":"اختر الباقة المناسبة",
+  "free": "مجانيه",
+  "gold":"جولد",
+  "silver": "سيلفر",
+  "youCanAddUnlimitedNumberOfPhotosAndVideos" : "يمكنك اضافة عدد لا نهائي من الصور و الفيديوهات",
+  "youCannotAddPhotosOrVideos" :"لا يمكنك اضافة الصور او الفيديوهات",
+  "withTheFreePackage" :"يمكنك من خلال الباقة المجانية فقط تصفح التطبيق دون مشاركة الصور و الفيديوهات",
+  "youCanAddOnlyThreePhotos" :"يمكنك اضافة 3 صورة فقط",
+  "subscribeNow" :"اشترك الان",
+  "or":"أو",
+  "phoneNumber" :"رقم الجوال",
+  "findFriends" : "البحث عن أصدقاء",
+  "chooseThePlace" : "أختار المكان",
+  "services" : "الخدمات",
+  "like" : "اعجبنى",
+  "favorites" :"المفضلات",
+"share" : "مشاركه",
+"comments" : "التعليقات",
+"save" : "حفظ",
+"thereAreNoFavoritesYet": "لا يوجد مفضلات بعد",
+"goToSearch" : "اذهب للبحث عن افضل الأسعار المتميزة لوضعها في المفضلات للرجوع اليها في أي وقت",
+"address" : "العنوان",
+"location" : "اللوكيشن هنا كامل مثلا مصر...",
+"whatAreYouLookingFor" : "عن ماذا تبحث"
+
+
+
+
+
+
+
+
 
 }

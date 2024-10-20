@@ -1,31 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:ishtar/common/widget/text_widget.dart';
 import 'package:ishtar/config/app_text_styles.dart';
 
-class DoctorOrVisitor extends StatelessWidget {
-  const DoctorOrVisitor({
+class CustomContainerForSelectMethods extends StatelessWidget {
+  const CustomContainerForSelectMethods({
     super.key,
     required this.title,
+    required this.isWidth,
     required this.color,
-    this.isWidth = false,
     required this.colorText,
-    this.colorIcon,
-    this.isLogin = true,
+    required this.image,
+    // required this.isRegister,
   });
   final String title;
+  final String image;
+  final bool isWidth;
   final Color color;
   final Color colorText;
-  final Color? colorIcon;
-  final bool isWidth;
-  final bool isLogin;
+  // final bool isRegister;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
       height: 38.h,
-      width: isWidth ? 170.w : 107.w,
+      width: isWidth ? 170.w : null,
+      padding: isWidth ? EdgeInsets.zero : EdgeInsets.all(7),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(18.r),
         color: color,
@@ -34,7 +36,11 @@ class DoctorOrVisitor extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          if (!isLogin) Icon(Icons.shop_sharp, color: colorText),
+          SvgPicture.asset(
+            image,
+            color: colorText,
+            //width: 30,
+          ),
           SizedBox(width: isWidth ? 29.86.w : 11.w),
           TextWidget(
             title,

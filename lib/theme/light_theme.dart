@@ -6,6 +6,9 @@ import '../config/app_text_styles.dart';
 import '../config/color_resources.dart';
 
 ThemeData light = ThemeData(
+  appBarTheme: AppBarTheme(
+    backgroundColor: Colors.white,
+  ),
   fontFamily: AppStrings.fontFamily,
   primaryColor: const Color(0xFF188DFF),
   secondaryHeaderColor: const Color(0xff11233F),

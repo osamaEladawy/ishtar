@@ -1,6 +1,7 @@
 class AppStrings {
   static const String appName = "Courses";
   static const String fontFamily = "Cairo";
+  static const String fontFamilyInter = "Inter";
   static const String fontFamilyPoppins = "poppins";
   static const String fontFamilySF = "SF";
   static const String noRouteFound = "No Route Found";

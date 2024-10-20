@@ -42,13 +42,17 @@ class WelcomeScreen extends StatelessWidget {
               PrimaryButton(
                 title: LocaleKeys.user.tr(),
                 onTap: () {
-                  Navigator.pushNamed(context, Routes.loginScreen);
+                  Navigator.pushNamed(
+                      context, Routes.chooseLangAndCountryScreen);
                 },
               ),
               SizedBox(height: 9.h),
               PrimaryButton(
                 title: LocaleKeys.serviceProvider.tr(),
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(
+                      context, Routes.nextServiceProviderScreen);
+                },
               ),
             ],
           ),

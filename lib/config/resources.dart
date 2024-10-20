@@ -9,6 +9,38 @@ class ImageManger {
   static const String profile = '$IMAGE_PATH/profile.png';
   static const String lock = '$IMAGE_PATH/lock.png';
   static const String insta = '$IMAGE_PATH/instagram.png';
+  static const String instaaaa = '$IMAGE_PATH/insta.png';
+  static const String egypt = '$IMAGE_PATH/egypt.png';
+  static const String iraq = '$IMAGE_PATH/iraq.png';
+  static const String kuwait = '$IMAGE_PATH/kuwait.png';
+  static const String oman = '$IMAGE_PATH/oman.png';
+  static const String saudiArabia = '$IMAGE_PATH/saudi-arabia.png';
+  static const String united = '$IMAGE_PATH/united-arab-emirates.png';
+  static const String hosp = '$IMAGE_PATH/hosp.png';
+  static const String hosp1 = '$IMAGE_PATH/hosp1.png';
+  static const String hosp2 = '$IMAGE_PATH/hosp2.png';
+  static const String hosp3 = '$IMAGE_PATH/hosp3.png';
+  static const String bg = '$IMAGE_PATH/bg.png';
+  static const String hand = '$IMAGE_PATH/hand.png';
+  static const String hand1 = '$IMAGE_PATH/hand1.png';
+  static const String wrong = '$IMAGE_PATH/wrong.png';
+  static const String container = '$IMAGE_PATH/container.png';
+  static const String upImage = '$IMAGE_PATH/up_img.png';
+  static const String upImages = '$IMAGE_PATH/up_imgs.png';
+  static const String profileHome = '$IMAGE_PATH/p_h.png';
+  static const String hotil = '$IMAGE_PATH/hotil.png';
+  static const String click = '$IMAGE_PATH/click.png';
+  static const String pic1 = '$IMAGE_PATH/Ellipse 286.png';
+  static const String pic2 = '$IMAGE_PATH/Ellipse 288.png';
+  static const String pic3 = '$IMAGE_PATH/Ellipse 291.png';
+  static const String pic4 = '$IMAGE_PATH/Ellipse 292.png';
+  static const String pic5 = '$IMAGE_PATH/Ellipse 289.png';
+  static const String pic6 = '$IMAGE_PATH/Ellipse 290.png';
+
+  static const String rectangle1 = '$IMAGE_PATH/Rectangle 8825.png';
+  static const String rectangle2 = '$IMAGE_PATH/Rectangle 8826.png';
+  static const String travelLuggage = '$IMAGE_PATH/travel-luggage.png';
+  static const String healthcare = '$IMAGE_PATH/healthcare.png';
 }
 
 class IconsManger {
@@ -25,6 +57,44 @@ class IconsManger {
   static const String facebook = '$ICONS_PATH/facebook.svg';
   static const String check = '$ICONS_PATH/check.svg';
   static const String instagram = '$ICONS_PATH/instagram.svg';
+  static const String doc = '$ICONS_PATH/doc.svg';
+  static const String doctor = '$ICONS_PATH/doctor.svg';
+  static const String rest = '$ICONS_PATH/Restaurant.svg';
+  static const String hotel = '$ICONS_PATH/Hotel.svg';
+  static const String hosp = '$ICONS_PATH/hosp.svg';
+  static const String visit = '$ICONS_PATH/visit.svg';
+  static const String m5tabr = '$ICONS_PATH/m5tabr.svg';
+  static const String vic = '$ICONS_PATH/vic.svg';
+  static const String chemical = '$ICONS_PATH/Chemical.svg';
+  static const String landscape = '$ICONS_PATH/Landscape.svg';
+  static const String logo = '$ICONS_PATH/logo.svg';
+  static const String notify = '$ICONS_PATH/notify.svg';
+  static const String egypt = '$ICONS_PATH/egypt.svg';
+  static const String notification = '$ICONS_PATH/notification.svg';
+  static const String messages = '$ICONS_PATH/messages.svg';
+  static const String profile = '$ICONS_PATH/profile.svg';
+  static const String home = '$ICONS_PATH/home.svg';
+  static const String heart = '$ICONS_PATH/heart.svg';
+  static const String hearts = '$ICONS_PATH/hearts.svg';
+  static const String button = '$ICONS_PATH/button.svg';
+  static const String routing = '$ICONS_PATH/routing-2.svg';
+  static const String iconPlus = '$ICONS_PATH/icon.svg';
+  static const String vector = '$ICONS_PATH/Vector.svg';
+  static const String insta = '$ICONS_PATH/insta.svg';
+  static const String search = '$ICONS_PATH/search.svg';
+  static const String settings = '$ICONS_PATH/settings.svg';
+  static const String lineV = '$ICONS_PATH/line_v.svg';
+  static const String favMsg = '$ICONS_PATH/fav_msg.svg';
+  static const String save = '$ICONS_PATH/save.svg';
+  static const String comment = '$ICONS_PATH/comments.svg';
+  static const String like = '$ICONS_PATH/like.svg';
+  static const String share = '$ICONS_PATH/share.svg';
+  static const String delete = '$ICONS_PATH/delete.svg';
+  static const String deletee = '$ICONS_PATH/deletee.svg';
+  static const String iconLogo = '$ICONS_PATH/icon_logo.svg';
+  static const String medical = '$ICONS_PATH/medical.svg';
+  static const String travel = '$ICONS_PATH/travel.svg';
+  static const String deletes = '$ICONS_PATH/deletes.svg';
 }
 
 class LottieManger {}

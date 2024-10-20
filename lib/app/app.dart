@@ -3,6 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:ishtar/features/chats/cubit/chats_cubit.dart';
+import 'package:ishtar/features/choose_your_package/cubit/choose_package_cubit.dart';
+import 'package:ishtar/features/home/cubit/home_cubit.dart';
+import 'package:ishtar/features/home_tap/cubit/home_tap_cubit.dart';
+import 'package:ishtar/features/services/cubit/services_cubit.dart';
 
 import '../build_injection.dart';
 import '../common/cubit/location_bloc/location_cubit.dart';
@@ -26,9 +31,17 @@ class MyApp extends StatelessWidget {
         return MultiBlocProvider(
           providers: [
             BlocProvider<AuthCubit>(create: (context) => getIt<AuthCubit>()),
-            BlocProvider<LocationCubit>(create: (context) => getIt<LocationCubit>()),
-           //BlocProvider<ProfileCubit>(create: (context) => getIt<ProfileCubit>()),
-           // BlocProvider<LanguageCubit>(create: (context) => getIt<LanguageCubit>()),
+            BlocProvider<ChoosePackageCubit>(
+                create: (context) => getIt<ChoosePackageCubit>()),
+            BlocProvider<LocationCubit>(
+                create: (context) => getIt<LocationCubit>()),
+            BlocProvider<HomeTapCubit>(
+                create: (context) => getIt<HomeTapCubit>()),
+            BlocProvider<HomeCubit>(create: (context) => getIt<HomeCubit>()),
+            BlocProvider<ChatsCubit>(create: (context) => getIt<ChatsCubit>()),
+            BlocProvider<ServicesCubit>(create: (context) => getIt<ServicesCubit>()),
+            //BlocProvider<ProfileCubit>(create: (context) => getIt<ProfileCubit>()),
+            // BlocProvider<LanguageCubit>(create: (context) => getIt<LanguageCubit>()),
             //BlocProvider<MyRiderCubit>(create: (context) => getIt<MyRiderCubit>()),
           ],
           child: AnnotatedRegion<SystemUiOverlayStyle>(
@@ -45,7 +58,7 @@ class MyApp extends StatelessWidget {
               title: 'Car Pooling',
               navigatorKey: navigatorKey,
               onGenerateRoute: RouteGenerator.getRoute,
-             // initialRoute: Routes.homeTapScreen,
+              // initialRoute: Routes.homeTapScreen,
               theme: light,
               home: child,
             ),
