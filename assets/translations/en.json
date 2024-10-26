@@ -56,7 +56,69 @@
 "goToSearch" : "Go to search for the best distinguished prices to put them in your favorites to refer back to them at any time", 
 "location" : "The location here is complete, for example, Egypt...",
 "address" : "Address",
-"whatAreYouLookingFor" : "What are you looking for"
+"whatAreYouLookingFor" : "What are you looking for",
+"touristServices" : "Tourist services",
+"theTouristServices" : "The Tourist services",
+"medicalServices" : "Medical services",
+"theMedicalServices" : "The Medical services",
+"airlines": "Airlines",
+"clinics":"Clinics",
+"nursing":"Nursing",
+"doctors":"Doctors",
+"more":"more",
+"searchWithIshtar" : "Search with Ishtar",
+"suggestedServices" : "Suggested Services",
+"Choose a province":"Choose a province",
+"Select your location":"Select your location",
+
+"searchInARange":"Search in a range",
+"Services":"Services",
+"specialties":"Specialties",
+"typeOfServices":"Type of services",
+"latestServices":"Latest services",
+"mostFollowed":"Most followed",
+"all":"All",
+"information": "Information",
+"contactUsThrough":"Contact Us Through",
+"chat": "Chat",
+"memberSince":"Member Since",
+"adOwner":"Ad Owner",
+"hospitalGeographicLocations":"Hospital Geographic Locations",
+"numberOfLikes":"Number of likes",
+"numberOfFollowers":"Number of followers",
+"chooseTheProvince" :"Choose the province",
+"searchByGovernorateName":"Search by governorate name",
+"chooseArea":"Choose Area",
+"searchByRegionName":"Search by region name",
+"locateYourLocation":"Locate your location",
+"dentist":"Dentist",
+"experience" :"Experience",
+"aboutTheDoctor":"About The Doctor",
+"photos":"photos",
+"videos":"Videos",
+"inquiryNumber":"Inquiry number",
+"whatsAppNumber":"WhatsApp number",
+"doctorName":"Doctor's name",
+"email":"Email",
+"website":"Website",
+"showBusinessHours":"Show business hours",
+
+"searchForLocation" :"Search for location",
+"reset":"Reset",
+"application":"Application",
+"searchInScope":"Search in scope",
+"filterByMap":"Filter By Map",
+"theVideos":"Videos",
+"chooseTheRightDate" :"Choose The Right Date",
+"addAnyDetails":"Add any details",
+"confirmYourReservation" :"Confirm Your Reservation",
+"cancellation" :"Cancellation"
+
+
+
+
+
+
   
 
 }

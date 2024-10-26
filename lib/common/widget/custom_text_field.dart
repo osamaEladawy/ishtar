@@ -16,6 +16,7 @@ class CustomTextField extends StatelessWidget {
   final TextInputType? keyboardType;
   final IconData? prefixIcon;
   final bool isHome;
+  final bool isAUth;
   final bool isChat;
   final bool isChatInfo;
   final Widget? searchWidget;
@@ -37,6 +38,7 @@ class CustomTextField extends StatelessWidget {
     this.isChat = false,
     this.isChatInfo = false,
     this.onFieldSubmitted,
+    this.isAUth = false,
   });
 
   @override
@@ -64,6 +66,9 @@ class CustomTextField extends StatelessWidget {
         onFieldSubmitted: onFieldSubmitted,
         controller: controller,
         decoration: InputDecoration(
+          contentPadding: isChat
+              ? EdgeInsets.only(bottom: 6.h, top: 14.h, right: 54.w)
+              : EdgeInsets.zero,
           border: OutlineInputBorder(
             borderRadius: isHome
                 ? BorderRadius.circular(8.r)

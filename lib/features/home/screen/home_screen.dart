@@ -7,7 +7,6 @@ import 'package:ishtar/common/widget/custom_appBar.dart';
 import 'package:ishtar/common/widget/text_widget.dart';
 import 'package:ishtar/config/app_text_styles.dart';
 import 'package:ishtar/config/resources.dart';
-import 'package:ishtar/features/auth/cubit/auth_cubit.dart';
 import 'package:ishtar/features/home/cubit/home_cubit.dart';
 import 'package:ishtar/translations/locale_keys.g.dart';
 
@@ -62,8 +61,7 @@ class HomeScreen extends StatelessWidget {
                                 alignment: Alignment.centerRight,
                                 margin: EdgeInsets.only(right: 8.w, left: 8.w),
                                 child: TextWidget(
-                                  HomeCubit
-                                      .instance.hospitals[index].nameHospital,
+                                  HomeCubit.instance.hospitals[index].name,
                                   textAlign: TextAlign.right,
                                   textStyle: AppTextStyle.textStyle(
                                     appFontSize: 13.sp,
@@ -97,8 +95,8 @@ class HomeScreen extends StatelessWidget {
                                     SvgPicture.asset(IconsManger.routing),
                                     SizedBox(width: 5.17.w),
                                     TextWidget(
-                                      HomeCubit.instance.hospitals[index]
-                                          .addressHospital,
+                                      HomeCubit
+                                          .instance.hospitals[index].address,
                                       textAlign: TextAlign.right,
                                       textStyle: AppTextStyle.textStyle(
                                         appFontSize: 12.sp,

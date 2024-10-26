@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ishtar/app/constant.dart';
 import 'package:ishtar/common/widget/custom_container_ishtar.dart';
 import 'package:ishtar/config/routes_manager.dart';
 
@@ -15,9 +16,10 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(milliseconds: 3000), () {
-      Navigator.pushReplacementNamed(context, Routes.welcomeScreen);
-    });
+    getFirst();
+    // Future.delayed(const Duration(milliseconds: 3000), () {
+    
+    // });
   }
 
   @override
@@ -36,5 +38,9 @@ class _SplashScreenState extends State<SplashScreen> {
         child: const CustomContainerIshtar(),
       ),
     );
+  }
+   getFirst() async {
+    await Constant.getLocation(context);
+     Navigator.pushReplacementNamed(context, Routes.welcomeScreen);
   }
 }

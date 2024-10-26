@@ -25,9 +25,16 @@ class AuthCubit extends Cubit<AuthState> {
   bool value = false;
 
   int selectCountries = 0;
+  int selectMyCountry = 0;
   void selectCountry(int index) {
     selectCountries = index;
     emit(SelectCountry(index: selectCountries));
+    emit(const ChangeColor());
+  }
+
+  void selectedMyCountry(int index) {
+    selectMyCountry = index;
+    emit(SelectCountry(index: selectMyCountry));
     emit(const ChangeColor());
   }
 
@@ -59,7 +66,7 @@ class AuthCubit extends Cubit<AuthState> {
     emit(const ChangeColor());
   }
 
-  List<Widget> pages= [
+  List<Widget> pages = [
     SelectDoctorScreen(),
     SelectVisitorScreen(),
   ];

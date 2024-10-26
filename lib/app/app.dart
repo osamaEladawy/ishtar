@@ -7,7 +7,10 @@ import 'package:ishtar/features/chats/cubit/chats_cubit.dart';
 import 'package:ishtar/features/choose_your_package/cubit/choose_package_cubit.dart';
 import 'package:ishtar/features/home/cubit/home_cubit.dart';
 import 'package:ishtar/features/home_tap/cubit/home_tap_cubit.dart';
+import 'package:ishtar/features/map/cubit/map_cubit.dart';
+import 'package:ishtar/features/profile/cubit/profile_cubit.dart';
 import 'package:ishtar/features/services/cubit/services_cubit.dart';
+import 'package:ishtar/features/my_ads/cubit/my_ads_cubit.dart';
 
 import '../build_injection.dart';
 import '../common/cubit/location_bloc/location_cubit.dart';
@@ -31,6 +34,8 @@ class MyApp extends StatelessWidget {
         return MultiBlocProvider(
           providers: [
             BlocProvider<AuthCubit>(create: (context) => getIt<AuthCubit>()),
+            BlocProvider<MyAdsCubit>(create: (context) => getIt<MyAdsCubit>()),
+            BlocProvider<MapCubit>(create: (context) => getIt<MapCubit>()),
             BlocProvider<ChoosePackageCubit>(
                 create: (context) => getIt<ChoosePackageCubit>()),
             BlocProvider<LocationCubit>(
@@ -39,10 +44,10 @@ class MyApp extends StatelessWidget {
                 create: (context) => getIt<HomeTapCubit>()),
             BlocProvider<HomeCubit>(create: (context) => getIt<HomeCubit>()),
             BlocProvider<ChatsCubit>(create: (context) => getIt<ChatsCubit>()),
-            BlocProvider<ServicesCubit>(create: (context) => getIt<ServicesCubit>()),
-            //BlocProvider<ProfileCubit>(create: (context) => getIt<ProfileCubit>()),
-            // BlocProvider<LanguageCubit>(create: (context) => getIt<LanguageCubit>()),
-            //BlocProvider<MyRiderCubit>(create: (context) => getIt<MyRiderCubit>()),
+            BlocProvider<ServicesCubit>(
+                create: (context) => getIt<ServicesCubit>()),
+            BlocProvider<ProfileCubit>(
+                create: (context) => getIt<ProfileCubit>()),
           ],
           child: AnnotatedRegion<SystemUiOverlayStyle>(
             value: const SystemUiOverlayStyle(

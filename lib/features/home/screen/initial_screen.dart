@@ -25,9 +25,9 @@ class InitialScreen extends StatelessWidget {
         clipBehavior: Clip.none,
         children: [
           Positioned(
-            bottom: 0,
-            right: 0,
-            left: 0,
+            bottom: 0.h,
+            right: 0.w,
+            left: 0.w,
             child: Image.asset(ImageManger.bg),
           ),
           Positioned(
@@ -132,7 +132,7 @@ class InitialScreen extends StatelessWidget {
                                           children: [
                                             Image.asset(HomeCubit.instance
                                                 .comments[index].image),
-                                                SizedBox(width:10.w),
+                                            SizedBox(width: 10.w),
                                             Column(
                                               mainAxisSize: MainAxisSize.min,
                                               crossAxisAlignment:
@@ -153,7 +153,7 @@ class InitialScreen extends StatelessWidget {
                                                 TextWidget(
                                                   HomeCubit.instance
                                                       .comments[index].comment,
-                                                 textStyle:
+                                                  textStyle:
                                                       AppTextStyle.textStyle(
                                                     appFontSize: 13.sp,
                                                     appFontWeight:
@@ -168,7 +168,8 @@ class InitialScreen extends StatelessWidget {
                                             GestureDetector(
                                               onTap: () {},
                                               child: SvgPicture.asset(
-                                                  IconsManger.deletes,),
+                                                IconsManger.deletes,
+                                              ),
                                             ),
                                           ],
                                         ),

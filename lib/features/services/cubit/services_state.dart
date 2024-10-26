@@ -8,3 +8,13 @@ sealed class ServicesState extends Equatable {
 }
 
 final class ServicesInitial extends ServicesState {}
+
+final class SelectServices extends ServicesState {
+  final int value;
+
+  const SelectServices({required this.value});
+}
+
+final class ChangeColor extends ServicesState {
+  const ChangeColor();
+}

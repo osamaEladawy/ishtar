@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ishtar/app/app.dart';
 import 'package:ishtar/common/widget/custom_appBar.dart';
 import 'package:ishtar/common/widget/text_widget.dart';
 import 'package:ishtar/config/app_text_styles.dart';
@@ -53,7 +52,7 @@ class FavScreen extends StatelessWidget {
                                 children: [
                                   TextWidget(
                                     HomeCubit
-                                        .instance.models[index].nameHospital,
+                                        .instance.models[index].name,
                                     textAlign: TextAlign.right,
                                     textStyle: AppTextStyle.textStyle(
                                       appFontSize: 13.sp,
@@ -79,7 +78,7 @@ class FavScreen extends StatelessWidget {
                                       SizedBox(width: 5.17.w),
                                       TextWidget(
                                         HomeCubit.instance.models[index]
-                                            .addressHospital,
+                                            .address,
                                         textAlign: TextAlign.right,
                                         textStyle: AppTextStyle.textStyle(
                                           appFontSize: 12.sp,

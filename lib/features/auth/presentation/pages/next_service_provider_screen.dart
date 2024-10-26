@@ -1,14 +1,8 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:ishtar/common/widget/custom_text_field.dart';
-import 'package:ishtar/common/widget/primary_button.dart';
-import 'package:ishtar/config/routes_manager.dart';
 import 'package:ishtar/features/auth/cubit/auth_cubit.dart';
-import 'package:ishtar/features/auth/presentation/pages/select_visitor_screen.dart';
 import 'package:ishtar/features/auth/presentation/widgets/custom_ontainer_for_select_methods.dart';
-import 'package:ishtar/translations/locale_keys.g.dart';
 
 class NextServiceProviderScreen extends StatelessWidget {
   const NextServiceProviderScreen({super.key});

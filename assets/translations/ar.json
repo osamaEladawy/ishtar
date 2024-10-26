@@ -56,7 +56,70 @@
 "goToSearch" : "اذهب للبحث عن افضل الأسعار المتميزة لوضعها في المفضلات للرجوع اليها في أي وقت",
 "address" : "العنوان",
 "location" : "اللوكيشن هنا كامل مثلا مصر...",
-"whatAreYouLookingFor" : "عن ماذا تبحث"
+"whatAreYouLookingFor" : "عن ماذا تبحث",
+"medicalServices" : "خدمات طبية",
+"theMedicalServices" : "الخدمات الطبيه",
+"touristServices" : "خدمات سياحيه",
+"theTouristServices" : "الخدمات السياحية",
+"airlines": "شركات الطيران",
+"clinics":"عيادات",
+"nursing":"تمريض",
+"doctors":"أطباء",
+"more":"المزيد",
+"searchWithIshtar" : "إبحث مع عشتار",
+  "suggestedServices": "خدمات مقترحة",
+
+"searchInARange":"البحث في نطاق",
+"Services":"الخدمات",
+"specialties":"الاختصاصات",
+"typeOfServices":"نوع الخدمات",
+"latestServices":"احدث الخدمات ",
+"mostFollowed":"الأكثر متابعة",
+"all":"الكل",
+"information": "المعلومات",
+"contactUsThrough": "تواصل معانا من خلال",
+"chat": "دردش",
+"memberSince" :"عضو منذ",
+"adOwner":"صاحب الإعلان",
+"hospitalGeographicLocations":"مواقع الجغرافى للمستشفى ",
+"numberOfLikes":"عدد الاعجابات",
+"numberOfFollowers": "عدد المتابعين",
+"chooseTheProvince" :"اختيار المحافظة",
+"searchByGovernorateName":"بحث باسم المحافظة",
+"chooseArea":"اختيار المنطقة",
+"searchByRegionName":"بحث باسم المنطقة",
+"locateYourLocation":"حدد موقعك",
+"dentist":"دكتور اسنان",
+"experience":"الخبره" ,
+"aboutTheDoctor":"عن الطبيب",
+"photos":"الصور",
+"videos":"الفيديوهات",
+"inquiryNumber":"رقم الاستعلامات",
+"whatsAppNumber":"رقم الواتساب",
+"doctorName":"اسم الطبيب",
+"email":"بريد الكتروني",
+"website":"الموقع الالكتروني",
+"showBusinessHours": "عرض مواعيد العمل",
+"chooseTheRightDate": "اختر الموعد المناسب",
+
+"searchForLocation" :"بحث عن موقع",
+"reset":"إعادة تعيين",
+"application":"تطبيق",
+"searchInScope":"البحث في نطاق",
+"filterByMap":"فلتر بالخريطة",
+"theVideos":"فيديوهات",
+"addAnyDetails" : "اضافة اي تفاصيل",
+"confirmYourReservation":"تأكيد الحجز",
+"cancellation":"الغاء"
+
+
+
+
+
+
+
+
+
 
 
 

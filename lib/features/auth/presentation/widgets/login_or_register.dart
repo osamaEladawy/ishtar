@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ishtar/app/app.dart';
 import 'package:ishtar/common/widget/custom_container_ishtar.dart';
 import 'package:ishtar/common/widget/custom_field_phone_number.dart';
 import 'package:ishtar/common/widget/custom_text_field.dart';

@@ -34,7 +34,8 @@ class ChatInfoScreen extends StatelessWidget {
                     itemCount: ChatsCubit.instance.messages.length,
                     itemBuilder: (context, index) {
                       return Padding(
-                        padding: const EdgeInsets.all(8.0),
+                        padding: EdgeInsets.symmetric(
+                            horizontal: 8.w, vertical: 10.h),
                         child: Align(
                           alignment:
                               ChatsCubit.instance.messages[index].sendByMe
@@ -48,8 +49,9 @@ class ChatInfoScreen extends StatelessWidget {
                             children: [
                               Container(
                                 height: 34.h,
-                                width: 214.w,
-                                alignment: Alignment.center,
+                                width: 220.w,
+                                padding: EdgeInsets.only(right: 9.w, top: 9.h),
+                                //alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                   color: ChatsCubit
                                           .instance.messages[index].sendByMe

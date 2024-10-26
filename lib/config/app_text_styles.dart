@@ -8,7 +8,7 @@ class AppTextStyle {
       {required double appFontSize,
       double? appFontHeight,
       Color? color,
-      bool? poppins,
+      bool? roboto,
       bool? inter,
       FontWeight appFontWeight = FontWeight.w400,
       TextDecoration? decoration}) {
@@ -17,8 +17,11 @@ class AppTextStyle {
       fontWeight: appFontWeight,
       color: color,
       decoration: decoration,
-      fontFamily:
-          inter == true ? AppStrings.fontFamilyInter : AppStrings.fontFamily,
+      fontFamily: inter == true
+          ? AppStrings.fontFamilyInter
+          : roboto == true
+              ? AppStrings.fontFamilyRoboto
+              : AppStrings.fontFamily,
       height: appFontHeight != null
           ? appFontHeight / appFontSize
           : appFontSize / appFontSize,

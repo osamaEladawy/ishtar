@@ -12,22 +12,30 @@ class CustomContainerForSelectMethods extends StatelessWidget {
     required this.color,
     required this.colorText,
     required this.image,
-    // required this.isRegister,
+    this.isRegister = false,
   });
   final String title;
   final String image;
   final bool isWidth;
   final Color color;
   final Color colorText;
-  // final bool isRegister;
+  final bool isRegister;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.center,
-      height: 38.h,
-      width: isWidth ? 170.w : null,
-      padding: isWidth ? EdgeInsets.zero : EdgeInsets.all(7),
+      height: isRegister ? 35.h : 38.h,
+      width: isRegister
+          ? 107.w
+          : isWidth
+              ? 170.w
+              : null,
+      padding: isWidth
+          ? EdgeInsets.zero
+          : isRegister
+              ? EdgeInsets.zero
+              : EdgeInsets.all(7),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(18.r),
         color: color,
@@ -36,11 +44,12 @@ class CustomContainerForSelectMethods extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          SvgPicture.asset(
-            image,
-            color: colorText,
-            //width: 30,
-          ),
+          if (!isRegister)
+            SvgPicture.asset(
+              image,
+              color: colorText,
+              //width: 30,
+            ),
           SizedBox(width: isWidth ? 29.86.w : 11.w),
           TextWidget(
             title,

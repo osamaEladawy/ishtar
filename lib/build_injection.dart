@@ -5,8 +5,11 @@ import 'package:ishtar/features/chats/chats_injection.dart';
 import 'package:ishtar/features/choose_your_package/choose_package.dart';
 import 'package:ishtar/features/home/home_injection.dart';
 import 'package:ishtar/features/home_tap/home_tap_injection.dart';
+import 'package:ishtar/features/map/map_injection.dart';
+import 'package:ishtar/features/profile/profile_injection.dart';
 import 'package:ishtar/features/services/services_injection.dart';
 import 'package:ishtar/features/splash/splash_injection.dart';
+import 'package:ishtar/features/my_ads/my_ads_injection.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final getIt = GetIt.instance;
@@ -21,24 +24,12 @@ Future<void> init() async {
   choosePackageInjection();
   chatsInjection();
   servicesInjection();
-  // initOnBoardingInjection();
-  // initHomeInjection();
-  // initHomeTapInjection();
-  // initMyRideInjection();
-  // offerRideInjection();
-  // initializeNotificationInjection();
-  // findRideInjection();
-  // mapViewInJection();
-  // requestRideInjection();
-  // profileInjection();
-  // languageInjection();
+  profileInjection();
+  myAdsInjection();
+  mapInjection();
 
   getIt.registerFactory<LocationCubit>(() => LocationCubit());
 
-  // getIt.registerLazySingleton(() => http.Client());
-  //getIt.registerLazySingleton(() => InternetConnectionChecker());
-  // s1.registerLazySingleton(() => http.Client());
-  // s1.registerLazySingleton(() => InternetConnectionChecker());
   final sharedPreferences = await SharedPreferences.getInstance();
   getIt.registerLazySingleton(() => sharedPreferences);
 }

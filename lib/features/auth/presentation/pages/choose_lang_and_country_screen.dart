@@ -1,5 +1,3 @@
-import 'package:country_code_picker/country_code_picker.dart';
-import 'package:country_picker/country_picker.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -32,7 +30,7 @@ class ChooseLangAndCountryScreen extends StatelessWidget {
             Container(
               alignment: Alignment.topRight,
               child: TextWidget(
-                LocaleKeys.chooseCountry.tr(),
+                LocaleKeys.chooseLanguage.tr(),
                 textAlign: TextAlign.right,
                 textStyle: AppTextStyle.textStyle(
                   appFontSize: 13.sp,
@@ -86,7 +84,7 @@ class ChooseLangAndCountryScreen extends StatelessWidget {
             Container(
               alignment: Alignment.topRight,
               child: TextWidget(
-                LocaleKeys.chooseLanguage.tr(),
+                LocaleKeys.chooseCountry.tr(),
                 textAlign: TextAlign.right,
                 textStyle: AppTextStyle.textStyle(
                   appFontSize: 13.sp,

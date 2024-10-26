@@ -15,3 +15,15 @@ final class SelectFav extends HomeState {
 }
 
 final class ChangeValue extends HomeState {}
+final class SelectOptions extends HomeState {
+  final int index;
+
+  const SelectOptions({required this.index});
+}
+
+final class SelectCategory extends HomeState{
+  final int index;
+
+  const SelectCategory({required this.index});
+}
+
