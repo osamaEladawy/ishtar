@@ -170,9 +170,11 @@ class ServicesAndSpecializationsScreen extends StatelessWidget {
                       SizedBox(height: 22.31.h),
                     if (ProfileCubit.instance.currentIndex == 1)
                       Container(
-                          margin: EdgeInsets.only(bottom: 40.h),
-                          child:
-                              PrimaryButton(title: LocaleKeys.continuee.tr()))
+                        margin: EdgeInsets.only(bottom: 40.h),
+                        child: PrimaryButton(
+                          title: LocaleKeys.continuee.tr(),
+                        ),
+                      ),
                   ],
                 ),
               ),

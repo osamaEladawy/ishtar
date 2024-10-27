@@ -42,80 +42,83 @@ class ChooseTheRightDate extends StatelessWidget {
         ],
       ),
       body: SafeArea(
-          child: Container(
-        child: Column(
-          children: [
-            Container(
-              alignment: Alignment.topRight,
-              margin: EdgeInsets.symmetric(horizontal: 20.w),
-              child: TextWidget(
-                LocaleKeys.chooseTheRightDate.tr(),
-                textAlign: TextAlign.center,
-                textStyle: AppTextStyle.textStyle(
-                  appFontSize: 14.sp,
-                  appFontHeight: 16.sp,
-                  appFontWeight: FontWeight.w700,
-                  color: const Color(0xff323232),
-                ),
-              ),
-            ),
-            SizedBox(height: 14.h),
-            SizedBox(),
-            SizedBox(height: 30.h),
-            Container(
-              margin: EdgeInsets.symmetric(horizontal: 20.w),
-              child: TextField(
-                maxLines: 5,
-                decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintStyle: AppTextStyle.textStyle(
-                    appFontSize: 12.sp,
+        child: Container(
+          child: Column(
+            children: [
+              Container(
+                alignment: Alignment.topRight,
+                margin: EdgeInsets.symmetric(horizontal: 20.w),
+                child: TextWidget(
+                  LocaleKeys.chooseTheRightDate.tr(),
+                  textAlign: TextAlign.center,
+                  textStyle: AppTextStyle.textStyle(
+                    appFontSize: 14.sp,
                     appFontHeight: 16.sp,
-                    appFontWeight: FontWeight.w400,
-                    color: Color(0xff000000),
+                    appFontWeight: FontWeight.w700,
+                    color: const Color(0xff323232),
                   ),
-                  hintText: LocaleKeys.addAnyDetails.tr(),
-                  filled: true,
-                  fillColor: Color(0xffFFFFFF),
                 ),
               ),
-            ),
-            Spacer(),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: 40.h, horizontal: 20.w),
-              alignment: Alignment.center,
-              child: BlocBuilder<ProfileCubit, ProfileState>(
-                builder: (context, state) {
-                  return Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ...List.generate(ProfileCubit.instance.categories.length,
-                          (index) {
-                        return GestureDetector(
-                          onTap: () {
-                            ProfileCubit.instance.selectCategory(index);
-                          },
-                          child: TypeButtons(
-                            title: ProfileCubit.instance.categories[index],
-                            colorContainer:
-                                ProfileCubit.instance.selectedCategory == index
-                                    ? Color(0xff188DFF)
-                                    : Color(0xffF0F0F0),
-                            colorText:
-                                ProfileCubit.instance.selectedCategory == index
-                                    ? Color(0xffFFFFFF)
-                                    : Color(0xff020202),
-                          ),
-                        );
-                      })
-                    ],
-                  );
-                },
+              SizedBox(height: 14.h),
+              SizedBox(),
+              SizedBox(height: 30.h),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 20.w),
+                child: TextField(
+                  maxLines: 5,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: AppTextStyle.textStyle(
+                      appFontSize: 12.sp,
+                      appFontHeight: 16.sp,
+                      appFontWeight: FontWeight.w400,
+                      color: Color(0xff000000),
+                    ),
+                    hintText: LocaleKeys.addAnyDetails.tr(),
+                    filled: true,
+                    fillColor: Color(0xffFFFFFF),
+                  ),
+                ),
               ),
-            ),
-          ],
+              Spacer(),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 40.h, horizontal: 20.w),
+                alignment: Alignment.center,
+                child: BlocBuilder<ProfileCubit, ProfileState>(
+                  builder: (context, state) {
+                    return Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        ...List.generate(
+                            ProfileCubit.instance.categories.length, (index) {
+                          return GestureDetector(
+                            onTap: () {
+                              ProfileCubit.instance.selectCategory(index);
+                            },
+                            child: TypeButtons(
+                              title: ProfileCubit.instance.categories[index],
+                              colorContainer:
+                                  ProfileCubit.instance.selectedCategory ==
+                                          index
+                                      ? Color(0xff188DFF)
+                                      : Color(0xffF0F0F0),
+                              colorText:
+                                  ProfileCubit.instance.selectedCategory ==
+                                          index
+                                      ? Color(0xffFFFFFF)
+                                      : Color(0xff020202),
+                            ),
+                          );
+                        })
+                      ],
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
         ),
-      )),
+      ),
     );
   }
 }
