@@ -47,8 +47,8 @@ class ChooseAreaScreen extends StatelessWidget {
                     decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                          color: const Color(0xff0000000F).withOpacity(0.2),
-                          blurRadius: 9,
+                          color: const Color(0xff5A5A5A).withOpacity(0.1),
+                          blurRadius: 13,
                           spreadRadius: 1,
                           offset: Offset(0, 3),
                         ),
@@ -70,10 +70,10 @@ class ChooseAreaScreen extends StatelessWidget {
                       color: const Color(0xffFFFFFF),
                       boxShadow: [
                         BoxShadow(
-                          color: const Color(0xff0000000F).withOpacity(0.2),
-                          blurRadius: 17,
+                          color: const Color(0xff5A5A5A).withOpacity(0.3),
+                          blurRadius: 7,
                           spreadRadius: 1,
-                          offset: Offset(0, 3),
+                          offset: Offset(0, 2),
                         ),
                       ],
                     ),
@@ -117,7 +117,9 @@ class ChooseAreaScreen extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SizedBox(height: 21.h),
+                  SizedBox(height: 11.h),
+                  Divider(height: 1.h,color: Color(0xffE3E3E3)),
+                  SizedBox(height: 10.h),
                   Expanded(
                     child: ListView.separated(
                       shrinkWrap: true,

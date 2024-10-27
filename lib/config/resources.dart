@@ -3,6 +3,7 @@ const String ICONS_PATH = "assets/icons";
 const String LOTTIE_PATH = "assets/lottie";
 
 class ImageManger {
+
   static const String splashLogo = '$IMAGE_PATH/splash_logo.png';
   static const String logo = '$IMAGE_PATH/logo.png';
   static const String back_ground_img = '$IMAGE_PATH/back_ground_img.png';
@@ -93,8 +94,10 @@ class ImageManger {
   static const String cenima = '$IMAGE_PATH/cenima.png';
   static const String unnamed = '$IMAGE_PATH/unnamed.png';
   static const String connect = '$IMAGE_PATH/connect.png';
+  static const String rectangle31 = '$IMAGE_PATH/Rectangle 31.png';
 
   static const String profile_doc = '$IMAGE_PATH/profile_doc.png';
+  static const String times = '$IMAGE_PATH/times.png';
 }
 
 class IconsManger {
@@ -169,6 +172,8 @@ class IconsManger {
   static const String whatsapp = '$ICONS_PATH/Whatsapp.svg';
   static const String mappppp = '$ICONS_PATH/mappppp.svg';
   static const String video = '$ICONS_PATH/video.svg';
+  static const String Vector_l = '$ICONS_PATH/Vector_l.svg';
+  static const String Vector_r = '$ICONS_PATH/Vector_r.svg';
 }
 
 class LottieManger {}

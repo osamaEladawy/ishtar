@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ishtar/app/app.dart';
 import 'package:ishtar/config/resources.dart';
+import 'package:ishtar/features/profile/models/date_models.dart';
 import 'package:ishtar/features/services/models/category_model.dart';
 import 'package:ishtar/features/services/screen/medical_services_screen.dart';
 import 'package:ishtar/features/services/screen/tourist_services_screen.dart';
@@ -17,6 +18,7 @@ class ProfileCubit extends Cubit<ProfileState> {
 
   static final ProfileCubit _profileCubit =
       BlocProvider.of(navigatorKey.currentContext!);
+
   static ProfileCubit get instance => _profileCubit;
 
   double value = 0;
@@ -145,5 +147,53 @@ class ProfileCubit extends Cubit<ProfileState> {
     "مدينة نصر",
     "مدينة الرحاب",
     "مصر الجديدة",
+  ];
+
+  List<DateModels> dates = [
+    DateModels(
+      id: 1,
+      day: "اليوم",
+      times: [
+        TimesModels(id: 1, time: "لا توجد مواعيد متاحة"),
+      ],
+      reservation: "حجز",
+      isReservation: true,
+    ),
+    DateModels(
+      id: 1,
+      day: "غدا",
+      times: [
+
+      ],
+      reservation: "حجز",
+      isReservation: true,
+    ),
+    DateModels(
+      id: 1,
+      day: "السبت",
+      times: [
+
+      ],
+      reservation: "حجز",
+      isReservation: false,
+    ),
+    DateModels(
+      id: 1,
+      day: "الاحد",
+      times: [
+
+      ],
+      reservation: "حجز",
+      isReservation: true,
+    ),
+    DateModels(
+      id: 1,
+      day: "الاتنين",
+      times: [
+
+      ],
+      reservation: "حجز",
+      isReservation: true,
+    ),
   ];
 }

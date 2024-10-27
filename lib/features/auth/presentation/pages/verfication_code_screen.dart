@@ -59,51 +59,63 @@ class VerificationCodeScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 19.h),
-              Container(
-                child: PinCodeTextField(
-                  keyboardType: TextInputType.number,
-                  length: 5,
-                  obscureText: false,
-                  animationType: AnimationType.fade,
-                  pinTheme: PinTheme(
-                    shape: PinCodeFieldShape.box,
-                    borderRadius: BorderRadius.circular(5),
-                    fieldHeight: 59.h,
-                    fieldWidth: 59.w,
-                    activeColor: Theme.of(context).primaryColor,
-                    //selectedColor: Color(0xffB9B9B9),
-                    inactiveColor: Color(0xffF1F1F1),
-                    activeBoxShadow: [
-                      BoxShadow(
-                        color: Color(0xffF1F1F1),
-                        offset: Offset(0, 3),
-                        spreadRadius: 5.1,
-                        blurStyle: BlurStyle.outer,
-                        blurRadius: 5,
-                      ),
-                      // box-shadow: 0px 3px 3px 0px #0000000D;
-                    ],
+              PinCodeTextField(
+                boxShadows: [
+                  BoxShadow(
+                    //color: Color(0xffF1F1F1),
+                    color: const Color(0xff5A5A5A).withOpacity(0.3),
+                    blurRadius: 15,
+                    spreadRadius:2,
+                    offset: Offset(3, 3),
+                    blurStyle: BlurStyle.outer,
 
-                    activeFillColor: Colors.white,
                   ),
-                  animationDuration: const Duration(milliseconds: 300),
-                  onCompleted: (v) {
-                    print("Completed");
-                  },
-                  onChanged: (value) {
-                    print(value);
-                    // setState(() {
-                    //   currentText = value;
-                    // });
-                  },
-                  beforeTextPaste: (text) {
-                    print("Allowing to paste $text");
-                    //if you return true then it will show the paste confirmation dialog. Otherwise if false, then nothing will happen.
-                    //but you can show anything you want here, like your pop up saying wrong paste format or etc
-                    return true;
-                  },
-                  appContext: context,
+                ],
+                keyboardType: TextInputType.number,
+                length: 5,
+                obscureText: false,
+                animationType: AnimationType.fade,
+                pinTheme: PinTheme(
+                  shape: PinCodeFieldShape.box,
+                  borderRadius: BorderRadius.circular(5),
+                  fieldHeight: 59.h,
+                  fieldWidth: 59.w,
+                  activeColor: Theme.of(context).primaryColor,
+                  inactiveColor: Color(0xffF1F1F1),
+                 // selectedBorderWidth: 2,
+                  inActiveBoxShadow: [
+
+                  ],
+                  activeBoxShadow: [
+                    BoxShadow(
+                      //color: Color(0xffF1F1F1),
+                      color: const Color(0xff5A5A5A).withOpacity(0.2),
+                      blurRadius:11,
+                      spreadRadius:1,
+                      offset: Offset(0, 0),
+                      blurStyle: BlurStyle.outer,
+
+                    ),
+                  ],
+                //  activeFillColor: Colors.white,
                 ),
+                animationDuration: const Duration(milliseconds: 300),
+                onCompleted: (v) {
+                  print("Completed");
+                },
+                onChanged: (value) {
+                  print(value);
+                  // setState(() {
+                  //   currentText = value;
+                  // });
+                },
+                beforeTextPaste: (text) {
+                  print("Allowing to paste $text");
+                  //if you return true then it will show the paste confirmation dialog. Otherwise if false, then nothing will happen.
+                  //but you can show anything you want here, like your pop up saying wrong paste format or etc
+                  return true;
+                },
+                appContext: context,
               ),
               SizedBox(height: 17.h),
               Text.rich(

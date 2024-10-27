@@ -24,20 +24,12 @@ class CustomCard extends StatelessWidget {
         color: const Color(0xffFFFFFF),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xff0000000F).withOpacity(0.2),
-            blurRadius: 17,
+            color: const Color(0xff5A5A5A).withOpacity(0.3),
+            blurRadius: 3,
             spreadRadius: 1,
             offset: Offset(0, 3),
           ),
         ],
-        // boxShadow: const [
-        //   BoxShadow(
-        //     color: Color(0xff020202),
-        //     offset: Offset(0, 3),
-        //     //spreadRadius: 5,
-        //     blurRadius: 3,
-        //   ),
-        // ],
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

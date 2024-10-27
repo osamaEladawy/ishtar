@@ -12,7 +12,7 @@ class CustomRows extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 43.h,
+      height: 50.h,
       width: 344.w,
       alignment: Alignment.center,
       decoration: BoxDecoration(
@@ -20,7 +20,7 @@ class CustomRows extends StatelessWidget {
         borderRadius: BorderRadius.circular(18.r),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xff0000000F).withOpacity(0.2),
+            color: const Color(0xff5A5A5A).withOpacity(0.1),
             blurRadius: 13,
             spreadRadius: 1,
             offset: Offset(0, 3),

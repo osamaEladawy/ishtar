@@ -30,8 +30,9 @@ class CustomAppBarAuth extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: const Color(0xff0000000F).withOpacity(0.2),
-            blurRadius: 10,
-            offset: Offset(0, 3),
+            blurRadius: 5,
+            spreadRadius: 1,
+            offset: Offset(0, 2),
           ),
         ],
       ),
