@@ -23,7 +23,7 @@ class LoginOrRegister extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          SizedBox(height: 121.h),
+          //SizedBox(height: 20.h),
           const CustomContainerIshtar(),
           SizedBox(height: 51.h),
           TextWidget(
@@ -36,6 +36,7 @@ class LoginOrRegister extends StatelessWidget {
           ),
           TextWidget(
             LocaleKeys.enterYourPhoneNumberToLogin.tr(),
+            textAlign: TextAlign.center,
             textStyle: AppTextStyle.textStyle(
                 appFontSize: 13.sp,
                 appFontHeight: 24.36.sp,

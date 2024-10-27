@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
               locale: context.locale,
               useInheritedMediaQuery: true,
               debugShowCheckedModeBanner: false,
-              title: 'Car Pooling',
+              title: '',
               navigatorKey: navigatorKey,
               onGenerateRoute: RouteGenerator.getRoute,
               // initialRoute: Routes.homeTapScreen,

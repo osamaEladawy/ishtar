@@ -52,7 +52,7 @@ class ChooseLangAndCountryScreen extends StatelessWidget {
                           AuthCubit.instance.selectLanguage(index);
                         },
                         child: Container(
-                          height: 38.h,
+
                           width: 170.w,
                           alignment: Alignment.center,
                           decoration: BoxDecoration(

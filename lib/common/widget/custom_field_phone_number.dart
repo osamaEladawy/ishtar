@@ -20,6 +20,7 @@ class CustomFieldPhoneNumber extends StatelessWidget {
         Expanded(
           child: CustomTextField(
             keyboardType: TextInputType.phone,
+            obscureText: false,
             onChanged: (value) {
               try {
                 valueChanged(value);
@@ -33,7 +34,7 @@ class CustomFieldPhoneNumber extends StatelessWidget {
         ),
         SizedBox(width: 10.w),
         Container(
-          height: 48.h,
+
           decoration: BoxDecoration(
             color: const Color(0xffF7F5F9),
             borderRadius: BorderRadius.circular(8.w),
@@ -44,7 +45,7 @@ class CustomFieldPhoneNumber extends StatelessWidget {
           ),
           child: Container(
             width: 100.w,
-            height: 48.h,
+           padding: EdgeInsets.symmetric(vertical: 16.h),
             alignment: Alignment.center,
             child: CountryCodePicker(
               onChanged: print,

@@ -32,6 +32,7 @@ class WelcomeScreen extends StatelessWidget {
               ),
               TextWidget(
                 LocaleKeys.enterYourPhoneNumberToLogin.tr(),
+                textAlign: TextAlign.center,
                 textStyle: AppTextStyle.textStyle(
                     appFontSize: 13.sp,
                     appFontHeight: 24.36.sp,

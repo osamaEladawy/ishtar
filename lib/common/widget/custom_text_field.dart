@@ -43,108 +43,95 @@ class CustomTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: isHome
-          ? 40.h
-          : isChat
-              ? 44.h
+    return TextFormField(
+      keyboardType: keyboardType,
+      obscureText: obscureText ,
+      validator: validator,
+      onChanged: onChanged,
+      onFieldSubmitted: onFieldSubmitted,
+      controller: controller,
+      decoration: InputDecoration(
+        contentPadding: isChat
+            ? EdgeInsets.only(bottom: 6.h, top: 14.h, right: 54.w)
+            : EdgeInsets.symmetric(vertical: 16.h,horizontal: 16.w),
+        border: OutlineInputBorder(
+          borderRadius: isHome
+              ? BorderRadius.circular(8.r)
               : isChatInfo
-                  ? 52.h
-                  : 48.h,
-      width: isHome
-          ? 296.w
-          : isChat
-              ? 350.w
+                  ? BorderRadius.circular(26.r)
+                  : BorderRadius.circular(4.r),
+          borderSide: BorderSide(
+            color: const Color(0xffE2E2E2),
+            width: 1.w,
+          ),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: isHome
+              ? BorderRadius.circular(8.r)
               : isChatInfo
-                  ? 350.w
-                  : null,
-      child: TextFormField(
-        keyboardType: keyboardType,
-        obscureText: obscureText == false ? true : false,
-        validator: validator,
-        onChanged: onChanged,
-        onFieldSubmitted: onFieldSubmitted,
-        controller: controller,
-        decoration: InputDecoration(
-          contentPadding: isChat
-              ? EdgeInsets.only(bottom: 6.h, top: 14.h, right: 54.w)
-              : EdgeInsets.zero,
-          border: OutlineInputBorder(
-            borderRadius: isHome
-                ? BorderRadius.circular(8.r)
+                  ? BorderRadius.circular(26.r)
+                  : BorderRadius.circular(4.r),
+          borderSide: const BorderSide(
+            color: Color(0xffE2E2E2),
+            width: 1.0,
+          ),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: isHome
+              ? BorderRadius.circular(8.r)
+              : isChatInfo
+                  ? BorderRadius.circular(26.r)
+                  : BorderRadius.circular(4.r),
+          borderSide: BorderSide(
+            color: const Color(0xffE2E2E2),
+            width: 1.w,
+          ),
+        ),
+        filled: true,
+        fillColor: isHome
+            ? Color(0xff020202).withOpacity(0.05)
+            : isChat
+                ? Color(0xffFFFFFF)
                 : isChatInfo
-                    ? BorderRadius.circular(26.r)
-                    : BorderRadius.circular(4.r),
-            borderSide: BorderSide(
-              color: const Color(0xffE2E2E2),
-              width: 1.w,
-            ),
+                    ? Color(0xffF7F5F9)
+                    : const Color(0xffF7F5F9),
+        labelText: labelText,
+        hintText: hintText,
+        hintStyle: isHome
+            ? AppTextStyle.textStyle(
+                inter: true,
+                appFontSize: 13.sp,
+                appFontWeight: FontWeight.w400,
+                appFontHeight: 15.73.sp,
+                color: Color(0xffFFFFFF),
+              )
+            : isChat
+                ? AppTextStyle.textStyle(
+                    appFontSize: 13.sp,
+                    appFontWeight: FontWeight.w400,
+                    appFontHeight: 24.36.sp,
+                    color: Color(0xffC3CBD3))
+                : TextStyle(color:  Color(0xffB0B0B0)),
+        prefixIcon: prefixIcon != null ? IconButton(
+          onPressed: onPressedPrefixIcon,
+          icon: Icon(
+            prefixIcon,
+            color: isHome ? Color(0xffFFFFFF) : null,
           ),
-          enabledBorder: OutlineInputBorder(
-            borderRadius: isHome
-                ? BorderRadius.circular(8.r)
-                : isChatInfo
-                    ? BorderRadius.circular(26.r)
-                    : BorderRadius.circular(4.r),
-            borderSide: const BorderSide(
-              color: Color(0xffE2E2E2),
-              width: 1.0,
-            ),
-          ),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: isHome
-                ? BorderRadius.circular(8.r)
-                : isChatInfo
-                    ? BorderRadius.circular(26.r)
-                    : BorderRadius.circular(4.r),
-            borderSide: BorderSide(
-              color: const Color(0xffE2E2E2),
-              width: 1.w,
-            ),
-          ),
-          filled: true,
-          fillColor: isHome
-              ? Color(0xff020202).withOpacity(0.05)
-              : isChat
-                  ? Color(0xffFFFFFF)
-                  : isChatInfo
-                      ? Color(0xffF7F5F9)
-                      : const Color(0xffF7F5F9),
-          labelText: labelText,
-          hintText: hintText,
-          hintStyle: isHome
-              ? AppTextStyle.textStyle(
-                  inter: true,
-                  appFontSize: 13.sp,
-                  appFontWeight: FontWeight.w400,
-                  appFontHeight: 15.73.sp,
-                  color: Color(0xffFFFFFF),
-                )
-              : isChat
-                  ? AppTextStyle.textStyle(
-                      appFontSize: 13.sp,
-                      appFontWeight: FontWeight.w400,
-                      appFontHeight: 24.36.sp,
-                      color: Color(0xffC3CBD3))
-                  : TextStyle(),
-          prefixIcon: IconButton(
-            onPressed: onPressedPrefixIcon,
-            icon: Icon(
-              prefixIcon,
-              color: isHome ? Color(0xffFFFFFF) : null,
-            ),
-          ),
-          suffixIcon: isHome
-              ? searchWidget
-              : IconButton(
+        ) : null,
+        suffixIcon: isHome
+            ? searchWidget
+            : Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 15.w),
+              child: IconButton(
                   onPressed: onPressedSuffixIcon,
                   icon: Icon(
                     icon,
                     color: const Color(0xffB0B0B0),
-                    size: 20.sp,
+                    size: 15.sp,
                   ),
                 ),
-        ),
+            ),
       ),
     );
   }
