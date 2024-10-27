@@ -30,26 +30,201 @@ class _MapScreenState extends State<MapScreen> {
   //   MyAdsCubit.instance.getCurrentPosition(context);
   // }
 
-  // @override
-  // void dispose() {
-  //   super.dispose();
-  //   MyAdsCubit.instance.completerController!.dispose();
-  // }
+  @override
+  void dispose() {
+    super.dispose();
+    MyAdsCubit.instance.completerController!.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        // padding: EdgeInsets.only(top: 10.h),
         child: SingleChildScrollView(
           child: Column(
             children: [
               Stack(
                 children: [
-                  Container(
-                    height: MediaQuery.of(context).size.height,
-                    width: double.infinity,
-                    color: Colors.red,
+                  BlocBuilder<MyAdsCubit, MyAdsState>(
+                    builder: (context, state) {
+                      return GoogleMap(
+                        //mapType: MapType.terrain,
+                        markers: MyAdsCubit.instance.markers.toSet(),
+                        initialCameraPosition:
+                            MyAdsCubit.instance.cameraPosition!,
+                        onTap: (LatLng latLng) {},
+                        onMapCreated: (controllerGoogle) {
+                          try {
+                            mapController = controllerGoogle;
+                            //  RequestRideCubit.instance.completer!.complete(controllerGoogle);
+                            setState(() {
+                              controllerGoogle.setMapStyle('''
+                              [
+                            {
+                              "elementType": "geometry",
+                              "stylers": [
+                                {
+                          "color": "#f5f5f5"
+                                }
+                              ]
+                            },
+                            {
+                              "elementType": "labels.icon",
+                              "stylers": [
+                                {
+                          "visibility": "off"
+                                }
+                              ]
+                            },
+                            {
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                          "color": "#616161"
+                                }
+                              ]
+                            },
+                            {
+                              "elementType": "labels.text.stroke",
+                              "stylers": [
+                                {
+                          "color": "#f5f5f5"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "administrative.land_parcel",
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                          "color": "#bdbdbd"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "poi",
+                              "elementType": "geometry",
+                              "stylers": [
+                                {
+                          "color": "#eeeeee"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "poi",
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                          "color": "#757575"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "poi.park",
+                              "elementType": "geometry",
+                              "stylers": [
+                                {
+                          "color": "#e5e5e5"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "poi.park",
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                          "color": "#9e9e9e"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "road",
+                              "elementType": "geometry",
+                              "stylers": [
+                                {
+                          "color": "#ffffff"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "road.arterial",
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                          "color": "#757575"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "road.highway",
+                              "elementType": "geometry",
+                              "stylers": [
+                                {
+                          "color": "#dadada"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "road.highway",
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                          "color": "#616161"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "road.local",
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                          "color": "#9e9e9e"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "transit.line",
+                              "elementType": "geometry",
+                              "stylers": [
+                                {
+                          "color": "#e5e5e5"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "transit.station",
+                              "elementType": "geometry",
+                              "stylers": [
+                                {
+                          "color": "#eeeeee"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "water",
+                              "elementType": "geometry",
+                              "stylers": [
+                                {
+                          "color": "#c9c9c9"
+                                }
+                              ]
+                            },
+                            {
+                              "featureType": "water",
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                {
+                          "color": "#9e9e9e"
+                                }
+                              ]
+                            }
+                          ]
+                              ''');
+                            });
+                          } catch (e) {}
+                        },
+                      );
+                    },
                   ),
                   Positioned(
                     top: 15.h,
@@ -238,218 +413,3 @@ class CustomButton extends StatelessWidget {
     );
   }
 }
-
-
-//  Stack(
-//                         // clipBehavior: Clip.none,
-//                         // alignment: Alignment.topCenter,
-//                         children: [
-//                           //           BlocBuilder<MyAdsCubit, MyAdsState>(
-//                           //             builder: (context, state) {
-//                           //               return GoogleMap(
-//                           //                 //mapType: MapType.terrain,
-//                           //                 markers: MyAdsCubit.instance.markers.toSet(),
-//                           //                 initialCameraPosition:
-//                           //                     MyAdsCubit.instance.cameraPosition!,
-//                           //                 onTap: (LatLng latLng) {},
-//                           //                 onMapCreated: (controllerGoogle) {
-//                           //                   try {
-//                           //                     mapController = controllerGoogle;
-//                           //                     //  RequestRideCubit.instance.completer!.complete(controllerGoogle);
-//                           //                     setState(() {
-//                           //                       controllerGoogle.setMapStyle('''
-//                           //     [
-//                           //   {
-//                           //     "elementType": "geometry",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#f5f5f5"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "elementType": "labels.icon",
-//                           //     "stylers": [
-//                           //       {
-//                           // "visibility": "off"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "elementType": "labels.text.fill",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#616161"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "elementType": "labels.text.stroke",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#f5f5f5"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "featureType": "administrative.land_parcel",
-//                           //     "elementType": "labels.text.fill",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#bdbdbd"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "featureType": "poi",
-//                           //     "elementType": "geometry",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#eeeeee"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "featureType": "poi",
-//                           //     "elementType": "labels.text.fill",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#757575"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "featureType": "poi.park",
-//                           //     "elementType": "geometry",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#e5e5e5"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "featureType": "poi.park",
-//                           //     "elementType": "labels.text.fill",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#9e9e9e"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "featureType": "road",
-//                           //     "elementType": "geometry",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#ffffff"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "featureType": "road.arterial",
-//                           //     "elementType": "labels.text.fill",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#757575"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "featureType": "road.highway",
-//                           //     "elementType": "geometry",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#dadada"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "featureType": "road.highway",
-//                           //     "elementType": "labels.text.fill",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#616161"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "featureType": "road.local",
-//                           //     "elementType": "labels.text.fill",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#9e9e9e"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "featureType": "transit.line",
-//                           //     "elementType": "geometry",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#e5e5e5"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "featureType": "transit.station",
-//                           //     "elementType": "geometry",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#eeeeee"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "featureType": "water",
-//                           //     "elementType": "geometry",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#c9c9c9"
-//                           //       }
-//                           //     ]
-//                           //   },
-//                           //   {
-//                           //     "featureType": "water",
-//                           //     "elementType": "labels.text.fill",
-//                           //     "stylers": [
-//                           //       {
-//                           // "color": "#9e9e9e"
-//                           //       }
-//                           //     ]
-//                           //   }
-//                           // ]
-//                           //     ''');
-//                           //                     });
-//                           //                   } catch (e) {}
-//                           //                 },
-//                           //               );
-//                           //             },
-//                           //           ),
-//                           Container(
-//                             width: double.infinity,
-//                             margin: EdgeInsets.only(
-//                                 right: 20.w, left: 20.w, top: 17.h),
-//                             decoration: BoxDecoration(
-//                               borderRadius: BorderRadius.circular(26.r),
-//                               border: Border.all(
-//                                 color: const Color(0xffFFFFFF),
-//                               ),
-//                               color: const Color(0xffFFFFFF),
-//                               boxShadow: [
-//                                 BoxShadow(
-//                                   color: const Color(0xff0000000F)
-//                                       .withOpacity(0.2),
-//                                   blurRadius: 13,
-//                                   spreadRadius: 1,
-//                                   offset: Offset(0, 3),
-//                                 ),
-//                               ],
-//                             ),
-//                             child: CustomTextFormField(
-//                               hintText: LocaleKeys.searchForLocation.tr(),
-//                             ),
-//                           ),
-//                           SizedBox(width: 7.w),
-//                           SvgPicture.asset(IconsManger.searchIcon),
-//                         ],
-//                       ),
