@@ -91,8 +91,7 @@ class MyAdsCubit extends Cubit<MyAdsState> {
   Future<void> getCurrentPosition(context) async {
     final hasPermission = await _handleLocationPermission(context);
     if (!hasPermission) return;
-    await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high)
-        .then((Position position) {
+    await Geolocator.getCurrentPosition(desiredAccuracy: LocationAccuracy.high).then((Position position) {
       currentPosition = position;
     }).catchError((e) {
       debugPrint(e);
