@@ -5,14 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:ishtar/app/app.dart';
 import 'package:ishtar/config/resources.dart';
-import 'package:ishtar/features/auth/presentation/pages/choose_country_screen.dart';
-import 'package:ishtar/features/auth/presentation/pages/choose_type_service_screen.dart';
 import 'package:ishtar/features/chats/screen/chats_screen.dart';
 import 'package:ishtar/features/home/screen/category_screen.dart';
 import 'package:ishtar/features/home/screen/home_page.dart';
-import 'package:ishtar/features/profile/screen/choose_province_screen.dart';
 import 'package:ishtar/features/profile/screen/profile_screen.dart';
 import 'package:ishtar/features/my_ads/screen/my_ads_screen.dart';
+import 'package:ishtar/features/services/screen/services_screen.dart';
 import 'package:ishtar/translations/locale_keys.g.dart';
 
 part 'home_tap_state.dart';
@@ -40,8 +38,8 @@ class HomeTapCubit extends Cubit<HomeTapState> {
     //FavoritesScreen(),
     //ServicesScreen(),
     // ChooseTypeServiceScreen(),
-    HomePage(),
-    // CategoryScreen(),
+    //HomePage(),
+    CategoryScreen(),
     ChatsScreen(),
     MyAdsScreen(),
     ProfileScreen(),

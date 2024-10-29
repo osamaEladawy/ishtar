@@ -78,7 +78,7 @@ class ChooseTheRightDate extends StatelessWidget {
                     ),
                     SizedBox(width: 5.w),
                     SizedBox(
-                      height: 110.w,
+                      height: 140.h,
                       width: MediaQuery.of(context).size.width * 0.65,
                       child: ListView.separated(
                         reverse: true,
@@ -146,8 +146,8 @@ class ChooseTheRightDate extends StatelessWidget {
                                   width: 79.11.w,
                                   alignment: Alignment.center,
                                   decoration: BoxDecoration(
-                                    color: ProfileCubit.instance.dates[index]
-                                            .isReservation
+                                    color: ProfileCubit
+                                            .instance.dates[index].isReservation
                                         ? Color(0xff1350A3)
                                         : Color(0xffB1B1B1),
                                     borderRadius: BorderRadius.only(
@@ -172,9 +172,7 @@ class ChooseTheRightDate extends StatelessWidget {
                           );
                         },
                         separatorBuilder: (BuildContext context, int index) =>
-                            SizedBox(
-                          width: 5.w
-                        ),
+                            SizedBox(width: 5.w),
                       ),
                     ),
                     SizedBox(width: 5.w),
@@ -207,7 +205,7 @@ class ChooseTheRightDate extends StatelessWidget {
                 boxShadow: [
                   BoxShadow(
                     color: const Color(0xff5A5A5A).withOpacity(0.2),
-                    blurRadius:3,
+                    blurRadius: 3,
                     spreadRadius: 1,
                     offset: Offset(0, 1),
                   ),
@@ -252,8 +250,8 @@ class ChooseTheRightDate extends StatelessWidget {
                   return Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      ...List.generate(
-                          ProfileCubit.instance.categories.length, (index) {
+                      ...List.generate(ProfileCubit.instance.categories.length,
+                          (index) {
                         return GestureDetector(
                           onTap: () {
                             ProfileCubit.instance.selectCategory(index);
@@ -261,13 +259,11 @@ class ChooseTheRightDate extends StatelessWidget {
                           child: TypeButtons(
                             title: ProfileCubit.instance.categories[index],
                             colorContainer:
-                                ProfileCubit.instance.selectedCategory ==
-                                        index
+                                ProfileCubit.instance.selectedCategory == index
                                     ? Color(0xff188DFF)
                                     : Color(0xffF0F0F0),
                             colorText:
-                                ProfileCubit.instance.selectedCategory ==
-                                        index
+                                ProfileCubit.instance.selectedCategory == index
                                     ? Color(0xffFFFFFF)
                                     : Color(0xff020202),
                           ),

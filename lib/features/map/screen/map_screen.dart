@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:ishtar/common/widget/custom_text_field.dart';
 import 'package:ishtar/common/widget/cutom_real_appBar.dart';
 import 'package:ishtar/common/widget/text_widget.dart';
 import 'package:ishtar/config/app_text_styles.dart';

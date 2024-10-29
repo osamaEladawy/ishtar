@@ -86,8 +86,8 @@ class ServicesAndSpecializationsScreen extends StatelessWidget {
                           .instance.pages[ProfileCubit.instance.currentIndex],
                     if (ProfileCubit.instance.currentIndex == 1)
                       Container(
-                        margin: EdgeInsets.symmetric(
-                            horizontal: 20.w, vertical: 10.h),
+                        padding: EdgeInsets.symmetric(vertical: 10.h),
+                        margin: EdgeInsets.symmetric(horizontal: 20.w),
                         child: Divider(
                           height: 1.h,
                           color: Color(0xffB1B1B1),
@@ -116,8 +116,8 @@ class ServicesAndSpecializationsScreen extends StatelessWidget {
                       SpecializationsWidget(),
                     if (ProfileCubit.instance.currentIndex == 1)
                       Container(
-                        margin: EdgeInsets.symmetric(
-                            horizontal: 20.w, vertical: 10.h),
+                        padding: EdgeInsets.symmetric(vertical: 10.h),
+                        margin: EdgeInsets.symmetric(horizontal: 20.w),
                         child: Divider(height: 1.h, color: Color(0xffB1B1B1)),
                       ),
                     if (ProfileCubit.instance.currentIndex == 1)

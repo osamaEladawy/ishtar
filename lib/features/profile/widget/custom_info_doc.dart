@@ -1,11 +1,8 @@
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:ishtar/common/widget/text_widget.dart';
 import 'package:ishtar/config/app_text_styles.dart';
-import 'package:ishtar/config/resources.dart';
-import 'package:ishtar/translations/locale_keys.g.dart';
 
 class CustomInfoDoc extends StatelessWidget {
   const CustomInfoDoc({super.key, required this.title, required this.image});
