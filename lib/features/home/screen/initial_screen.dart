@@ -19,6 +19,7 @@ class InitialScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
+      height: double.infinity,
       alignment: Alignment.center,
       child: Stack(
         alignment: Alignment.center,
@@ -28,14 +29,17 @@ class InitialScreen extends StatelessWidget {
             bottom: 0.h,
             right: 0.w,
             left: 0.w,
+            // top: 0.h,
             child: Image.asset(ImageManger.bg),
           ),
           Positioned(
-            top: 30,
+            top: 30.h,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 SizedBox(
+                  width: 296.w,
+                  height: 40.h,
                   child: CustomTextField(
                     hintText: LocaleKeys.findFriends.tr(),
                     isHome: true,
@@ -43,7 +47,11 @@ class InitialScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(width: 9.w),
-                SvgPicture.asset(IconsManger.logo),
+                SvgPicture.asset(
+                  IconsManger.logo,
+                  height: 57.h,
+                  width: 55.w,
+                ),
               ],
             ),
           ),
@@ -63,8 +71,8 @@ class InitialScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 20,
-            right: 31,
+            bottom: 31.h,
+            right: 31.w,
             child: Column(
               children: [
                 Stack(
@@ -73,8 +81,8 @@ class InitialScreen extends StatelessWidget {
                   children: [
                     Image.asset(ImageManger.profileHome),
                     Positioned(
-                      bottom: -5,
-                      right: 0,
+                      bottom: -5.h,
+                      right: 0.w,
                       child: Container(
                         height: 26.h,
                         width: 26.w,
@@ -192,48 +200,42 @@ class InitialScreen extends StatelessWidget {
             ),
           ),
           Positioned(
-            bottom: 31,
-            left: 20,
+            bottom: 31.h,
+            left: 20.w,
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.end,
+              // mainAxisAlignment: MainAxisAlignment.start,
+              // crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Container(
-                  child: TextWidget(
-                    "Name here",
-                    textStyle: AppTextStyle.textStyle(
-                      inter: true,
-                      appFontSize: 16.sp,
-                      appFontWeight: FontWeight.w700,
-                      appFontHeight: 19.36.sp,
-                      color: Color(0xffFFFFFF),
-                    ),
+                TextWidget(
+                  "Name here",
+                  textStyle: AppTextStyle.textStyle(
+                    inter: true,
+                    appFontSize: 16.sp,
+                    appFontWeight: FontWeight.w700,
+                    appFontHeight: 19.36.sp,
+                    color: Color(0xffFFFFFF),
                   ),
                 ),
                 SizedBox(height: 5.h),
-                Container(
-                  child: TextWidget(
-                    "title of The video",
-                    textStyle: AppTextStyle.textStyle(
-                      inter: true,
-                      appFontSize: 13.sp,
-                      appFontWeight: FontWeight.w400,
-                      appFontHeight: 15.73.sp,
-                      color: Color(0xff000000),
-                    ),
+                TextWidget(
+                  "title of The video",
+                  textStyle: AppTextStyle.textStyle(
+                    inter: true,
+                    appFontSize: 13.sp,
+                    appFontWeight: FontWeight.w400,
+                    appFontHeight: 15.73.sp,
+                    color: Color(0xff000000),
                   ),
                 ),
                 SizedBox(height: 2.h),
-                Container(
-                  child: TextWidget(
-                    "here's a daily.. more",
-                    textStyle: AppTextStyle.textStyle(
-                      inter: true,
-                      appFontSize: 13.sp,
-                      appFontWeight: FontWeight.w400,
-                      appFontHeight: 15.73.sp,
-                      color: Color(0xffFFFFFF),
-                    ),
+                TextWidget(
+                  "here's a daily.. more",
+                  textStyle: AppTextStyle.textStyle(
+                    inter: true,
+                    appFontSize: 13.sp,
+                    appFontWeight: FontWeight.w400,
+                    appFontHeight: 15.73.sp,
+                    color: Color(0xffFFFFFF),
                   ),
                 ),
               ],

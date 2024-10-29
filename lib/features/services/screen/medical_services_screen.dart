@@ -16,7 +16,7 @@ class MedicalServicesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return isServicesAndSpecializations
         ? Container(
-            height: MediaQuery.of(context).size.height * 0.30,
+            height: MediaQuery.of(context).size.height * 0.35,
             margin: EdgeInsets.symmetric(horizontal: 20.w),
             child: GridView.builder(
                 physics: NeverScrollableScrollPhysics(),

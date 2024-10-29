@@ -25,73 +25,80 @@ class ChatInfoScreen extends StatelessWidget {
           body: SafeArea(
             child: Column(
               children: [
-                CustomCardChat(
-                  image: chatModel.image,
-                  name: chatModel.name,
+                Directionality(
+                  textDirection: TextDirection.rtl,
+                  child: CustomCardChat(
+                    image: chatModel.image,
+                    name: chatModel.name,
+                  ),
                 ),
-                Expanded(
-                  child: ListView.builder(
-                    itemCount: ChatsCubit.instance.messages.length,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 8.w, vertical: 10.h),
-                        child: Align(
-                          alignment:
-                              ChatsCubit.instance.messages[index].sendByMe
-                                  ? Alignment.centerRight
-                                  : Alignment.centerLeft,
-                          child: Column(
-                            crossAxisAlignment:
+                Directionality(
+                  textDirection: TextDirection.rtl,
+                  child: Expanded(
+                    child: ListView.builder(
+                      itemCount: ChatsCubit.instance.messages.length,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 8.w, vertical: 10.h),
+                          child: Align(
+                            alignment:
                                 ChatsCubit.instance.messages[index].sendByMe
-                                    ? CrossAxisAlignment.end
-                                    : CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                height: 34.h,
-                                width: 220.w,
-                                padding: EdgeInsets.only(right: 9.w, top: 9.h),
-                                //alignment: Alignment.center,
-                                decoration: BoxDecoration(
-                                  color: ChatsCubit
-                                          .instance.messages[index].sendByMe
-                                      ? Color(0xffFFFFFF)
-                                      : Color(0xff188DFF),
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(13.r),
-                                    topRight: Radius.circular(13.r),
-                                    // bottomLeft: Radius.circular(10.0),
-                                    bottomRight: Radius.circular(13.r),
-                                  ),
-                                ),
-                                child: TextWidget(
-                                  ChatsCubit.instance.messages[index].message,
-                                  textStyle: AppTextStyle.textStyle(
-                                    appFontSize: 13.sp,
-                                    appFontWeight: FontWeight.w600,
-                                    appFontHeight: 24.36.sp,
+                                    ? Alignment.centerRight
+                                    : Alignment.centerLeft,
+                            child: Column(
+                              crossAxisAlignment:
+                                  ChatsCubit.instance.messages[index].sendByMe
+                                      ? CrossAxisAlignment.end
+                                      : CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  height: 40.h,
+                                  width: 220.w,
+                                  padding:
+                                      EdgeInsets.only(right: 9.w, top: 9.h),
+                                 // alignment: Alignment.center,
+                                  decoration: BoxDecoration(
                                     color: ChatsCubit
                                             .instance.messages[index].sendByMe
-                                        ? Color(0xff010101)
-                                        : Color(0xffFFFFFF),
+                                        ? Color(0xffFFFFFF)
+                                        : Color(0xff188DFF),
+                                    borderRadius: BorderRadius.only(
+                                      topLeft: Radius.circular(13.r),
+                                      topRight: Radius.circular(13.r),
+                                      // bottomLeft: Radius.circular(10.0),
+                                      bottomRight: Radius.circular(13.r),
+                                    ),
+                                  ),
+                                  child: TextWidget(
+                                    ChatsCubit.instance.messages[index].message,
+                                    textStyle: AppTextStyle.textStyle(
+                                      appFontSize: 13.sp,
+                                      appFontWeight: FontWeight.w600,
+                                      appFontHeight: 24.36.sp,
+                                      color: ChatsCubit
+                                              .instance.messages[index].sendByMe
+                                          ? Color(0xff010101)
+                                          : Color(0xffFFFFFF),
+                                    ),
                                   ),
                                 ),
-                              ),
-                              Container(
-                                child: TextWidget(
-                                  ChatsCubit.instance.messages[index].time,
-                                  textStyle: AppTextStyle.textStyle(
-                                      appFontSize: 11.sp,
-                                      appFontWeight: FontWeight.w400,
-                                      appFontHeight: 20.61.sp,
-                                      color: Color(0xff010101)),
+                                Container(
+                                  child: TextWidget(
+                                    ChatsCubit.instance.messages[index].time,
+                                    textStyle: AppTextStyle.textStyle(
+                                        appFontSize: 11.sp,
+                                        appFontWeight: FontWeight.w400,
+                                        appFontHeight: 20.61.sp,
+                                        color: Color(0xff010101)),
+                                  ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
-                        ),
-                      );
-                    },
+                        );
+                      },
+                    ),
                   ),
                 ),
               ],

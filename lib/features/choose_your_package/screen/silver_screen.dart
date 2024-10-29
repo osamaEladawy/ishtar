@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:ishtar/common/widget/custom_appBar.dart';
 import 'package:ishtar/common/widget/primary_button.dart';
 import 'package:ishtar/common/widget/text_widget.dart';
 import 'package:ishtar/config/app_text_styles.dart';

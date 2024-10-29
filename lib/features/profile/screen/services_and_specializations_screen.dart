@@ -116,7 +116,7 @@ class ServicesAndSpecializationsScreen extends StatelessWidget {
                       SpecializationsWidget(),
                     if (ProfileCubit.instance.currentIndex == 1)
                       Container(
-                        padding: EdgeInsets.symmetric(vertical: 10.h),
+                        padding: EdgeInsets.only(top: 10.h),
                         margin: EdgeInsets.symmetric(horizontal: 20.w),
                         child: Divider(height: 1.h, color: Color(0xffB1B1B1)),
                       ),

@@ -7,7 +7,6 @@ import 'package:ishtar/app/app.dart';
 import 'package:ishtar/features/choose_your_package/screen/free_screen.dart';
 import 'package:ishtar/features/choose_your_package/screen/gold_screen.dart';
 import 'package:ishtar/features/choose_your_package/screen/silver_screen.dart';
-import 'package:ishtar/features/home_tap/cubit/home_tap_cubit.dart';
 import 'package:ishtar/translations/locale_keys.g.dart';
 
 part 'choose_package_state.dart';

@@ -18,7 +18,7 @@ class CustomContainerHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 36.h,
-      width: 143.w,
+      width: 165.w,
       alignment: Alignment.center,
       decoration: BoxDecoration(
         color: Color(0xffF0F0F0),

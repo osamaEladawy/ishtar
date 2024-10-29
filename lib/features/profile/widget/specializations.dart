@@ -10,7 +10,7 @@ class SpecializationsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.30,
+      height: MediaQuery.of(context).size.height * 0.35,
       margin: EdgeInsets.symmetric(horizontal: 20.w),
       child: GridView.builder(
           physics: NeverScrollableScrollPhysics(),

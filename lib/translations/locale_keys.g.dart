@@ -31,7 +31,7 @@ abstract class  LocaleKeys {
   static const hotels = 'hotels';
   static const profile = 'profile';
   static const home = 'home';
-  static const myAdvertisement = 'myAdvertisement';
+  static const myAds = 'myAds';
   static const messages = 'messages';
   static const addressHospital = 'addressHospital';
   static const category = 'category';

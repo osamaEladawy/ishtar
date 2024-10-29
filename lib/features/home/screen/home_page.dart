@@ -9,7 +9,6 @@ import 'package:ishtar/config/app_text_styles.dart';
 import 'package:ishtar/config/resources.dart';
 import 'package:ishtar/config/routes_manager.dart';
 import 'package:ishtar/features/home/cubit/home_cubit.dart';
-import 'package:ishtar/features/home/screen/details_screen.dart';
 import 'package:ishtar/features/home/widgets/custom_text.dart';
 import 'package:ishtar/features/services/screen/services_screen.dart';
 import 'package:ishtar/translations/locale_keys.g.dart';
@@ -43,7 +42,7 @@ class HomePage extends StatelessWidget {
         children: [
           SizedBox(height: 17.h),
           Padding(
-            padding:EdgeInsets.symmetric(horizontal: 20.w),
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: Stack(
               clipBehavior: Clip.none,
               children: [
@@ -138,7 +137,7 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: 33.h),
           Padding(
-            padding:EdgeInsets.symmetric(horizontal: 20.w),
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -168,7 +167,7 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: 33.h),
           Padding(
-            padding:  EdgeInsets.only(right: 20.w),
+            padding: EdgeInsets.only(right: 20.w),
             child: SizedBox(
               height: 235.h,
               child: BlocBuilder<HomeCubit, HomeState>(
@@ -183,25 +182,23 @@ class HomePage extends StatelessWidget {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(8.r),
                           border: Border(
-                            bottom: BorderSide(
-                              color: Colors.black.withOpacity(.2)
-                            )
-                          ),
+                              bottom: BorderSide(
+                                  color: Colors.black.withOpacity(.2))),
                         ),
                         child: Padding(
-                          padding:  EdgeInsets.only(top:13.h,bottom: 4,right: 8.w,left: 8.w),
+                          padding: EdgeInsets.only(
+                              top: 13.h, bottom: 4, right: 8.w, left: 8.w),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Container(
                                 height: 98.h,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(16.r),
-                                  image: DecorationImage(
-                                      image: AssetImage(HomeCubit.instance.touristServices[index].image),
-                                       fit: BoxFit.cover
-                                  )
-                                ),
+                                    borderRadius: BorderRadius.circular(16.r),
+                                    image: DecorationImage(
+                                        image: AssetImage(HomeCubit.instance
+                                            .touristServices[index].image),
+                                        fit: BoxFit.cover)),
                               ),
                               //Image.asset(HomeCubit.instance.touristServices[index].image,fit: BoxFit.fitWidth,),
                               SizedBox(height: 7.5.h),
@@ -246,7 +243,7 @@ class HomePage extends StatelessWidget {
                                   GestureDetector(
                                     onTap: () {},
                                     child: HomeCubit.instance
-                                        .touristServices[index].isFavorite
+                                            .touristServices[index].isFavorite
                                         ? SvgPicture.asset(IconsManger.hearts)
                                         : SvgPicture.asset(IconsManger.heart),
                                   ),
@@ -266,7 +263,7 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: 27.h),
           Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 20.w),
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -296,7 +293,7 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: 33.h),
           Padding(
-            padding:  EdgeInsets.only(right: 20.w),
+            padding: EdgeInsets.only(right: 20.w),
             child: SizedBox(
               height: 235.h,
               child: BlocBuilder<HomeCubit, HomeState>(
@@ -312,12 +309,11 @@ class HomePage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8.r),
                           border: Border(
                               bottom: BorderSide(
-                                  color: Colors.black.withOpacity(.2)
-                              )
-                          ),
+                                  color: Colors.black.withOpacity(.2))),
                         ),
                         child: Padding(
-                          padding:  EdgeInsets.only(top:13.h,bottom: 4,right: 8.w,left: 8.w),
+                          padding: EdgeInsets.only(
+                              top: 13.h, bottom: 4, right: 8.w, left: 8.w),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -326,10 +322,9 @@ class HomePage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(16.r),
                                     image: DecorationImage(
-                                        image: AssetImage(HomeCubit.instance.medicalServices[index].image),
-                                        fit: BoxFit.cover
-                                    )
-                                ),
+                                        image: AssetImage(HomeCubit.instance
+                                            .medicalServices[index].image),
+                                        fit: BoxFit.cover)),
                               ),
                               //Image.asset(HomeCubit.instance.touristServices[index].image,fit: BoxFit.fitWidth,),
                               SizedBox(height: 7.5.h),
@@ -374,7 +369,7 @@ class HomePage extends StatelessWidget {
                                   GestureDetector(
                                     onTap: () {},
                                     child: HomeCubit.instance
-                                        .medicalServices[index].isFavorite
+                                            .medicalServices[index].isFavorite
                                         ? SvgPicture.asset(IconsManger.hearts)
                                         : SvgPicture.asset(IconsManger.heart),
                                   ),
@@ -394,7 +389,7 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: 27.h),
           Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 20.w),
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: Align(
               alignment: Alignment.centerRight,
               child: TextWidget(
@@ -410,7 +405,7 @@ class HomePage extends StatelessWidget {
           ),
           SizedBox(height: 33.h),
           Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 20.w),
+            padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: ListView.separated(
               physics: NeverScrollableScrollPhysics(),
               shrinkWrap: true,
@@ -441,14 +436,14 @@ class HomePage extends StatelessWidget {
                         Row(
                           children: [
                             Container(
-                             // height: 84.h,
+                              // height: 84.h,
                               width: 101.w,
                               decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(12.r),
-                              image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: AssetImage(HomeCubit.instance.optionServices[index].image))
-                              ),
+                                  borderRadius: BorderRadius.circular(12.r),
+                                  image: DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: AssetImage(HomeCubit.instance
+                                          .optionServices[index].image))),
                             ),
                             SizedBox(width: 5.w),
                             Column(
@@ -456,8 +451,7 @@ class HomePage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 TextWidget(
-                                  HomeCubit
-                                      .instance.optionServices[index].name,
+                                  HomeCubit.instance.optionServices[index].name,
                                   textStyle: AppTextStyle.textStyle(
                                     appFontSize: 13.sp,
                                     appFontHeight: 24.36.sp,
@@ -466,8 +460,8 @@ class HomePage extends StatelessWidget {
                                   ),
                                 ),
                                 TextWidget(
-                                  HomeCubit.instance.optionServices[index]
-                                      .category,
+                                  HomeCubit
+                                      .instance.optionServices[index].category,
                                   textStyle: AppTextStyle.textStyle(
                                     appFontSize: 12.sp,
                                     appFontHeight: 22.49.sp,

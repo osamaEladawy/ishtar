@@ -101,7 +101,9 @@ class ChooseTypeServiceScreen extends StatelessWidget {
               SizedBox(height: 97.h),
               PrimaryButton(
                 title: LocaleKeys.continuee.tr(),
-                onTap: () {},
+                onTap: () {
+                  Navigator.pushNamed(context, Routes.homeTapScreen);
+                },
               ),
             ],
           ),

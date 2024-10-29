@@ -16,7 +16,7 @@ class TouristServicesScreen extends StatelessWidget {
     return isServicesAndSpecializations
         ? Container(
             margin: EdgeInsets.symmetric(horizontal: 20.w),
-            height: MediaQuery.of(context).size.height * 0.30,
+            height: MediaQuery.of(context).size.height * 0.35,
             child: GridView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 shrinkWrap: true,

@@ -35,7 +35,7 @@ class CustomContainerForSelectMethods extends StatelessWidget {
           ? EdgeInsets.zero
           : isRegister
               ? EdgeInsets.zero
-              : EdgeInsets.all(7),
+              : EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(18.r),
         color: color,

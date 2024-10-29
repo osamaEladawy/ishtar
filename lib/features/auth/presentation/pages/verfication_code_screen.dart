@@ -85,21 +85,9 @@ class VerificationCodeScreen extends StatelessWidget {
                     activeColor: Theme.of(context).primaryColor,
                     inactiveColor: Color(0xffF1F1F1),
                    // selectedBorderWidth: 2,
-                    inActiveBoxShadow: [
-                
-                    ],
-                    activeBoxShadow: [
-                      BoxShadow(
-                        //color: Color(0xffF1F1F1),
-                        color: const Color(0xff5A5A5A).withOpacity(0.2),
-                        blurRadius:11,
-                        spreadRadius:1,
-                        offset: Offset(0, 0),
-                        blurStyle: BlurStyle.outer,
-                
-                      ),
-                    ],
-                  //  activeFillColor: Colors.white,
+                   
+                  
+                    activeFillColor: Colors.white,
                   ),
                   animationDuration: const Duration(milliseconds: 300),
                   onCompleted: (v) {

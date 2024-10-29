@@ -21,14 +21,17 @@ class CustomContainerIshtar extends StatelessWidget {
           ],
         ),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          // i want to create condition
-          // if lang is ar
-          ...picChars.reversed,
-        ],
+      child: Directionality(
+        textDirection: TextDirection.ltr,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            // i want to create condition
+            // if lang is ar
+            ...picChars,
+          ],
+        ),
       ),
     );
   }

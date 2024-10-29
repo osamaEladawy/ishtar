@@ -52,7 +52,7 @@ class WelcomeScreen extends StatelessWidget {
                 title: LocaleKeys.serviceProvider.tr(),
                 onTap: () {
                   Navigator.pushNamed(
-                      context, Routes.nextServiceProviderScreen);
+                      context, Routes.chooseTypeServiceScreen);
                 },
               ),
             ],
